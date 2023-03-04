@@ -16,11 +16,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { useRouter } from "next/router";
 
 const pages = ["Home", "Productions", "Who we are"];
-const redirects = {
-  Home: "/",
-  Productions: "productions",
-  "Who we are": "about",
-};
+const redirects = ["/", "productions", "about"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -93,12 +89,12 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page, i) => (
                 <MenuItem
                   key={page}
                   onClick={() => {
                     handleCloseNavMenu();
-                    router.push(`/${redirects[page]}`);
+                    router.push(`/${redirects[i]}`);
                   }}
                 >
                   <Typography textAlign="center" sx={{ fontWeight: 300 }}>
@@ -127,12 +123,12 @@ function ResponsiveAppBar() {
             Oneiros
           </Typography>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {pages.map((page, i) => (
               <Button
                 key={page}
                 onClick={() => {
                   handleCloseNavMenu();
-                  router.push(`/${redirects[page]}`);
+                  router.push(`/${redirects[i]}`);
                 }}
                 sx={{
                   my: 2,
