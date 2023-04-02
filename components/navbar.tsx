@@ -146,7 +146,7 @@ function ResponsiveAppBar() {
           </Typography> */}
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {pages.map((page, i) => (
-              <Link href={redirects[i]} scroll={false}>
+              <Link key={i} href={redirects[i]} scroll={false}>
                 <Typography
                   textAlign="center"
                   sx={{ fontWeight: 300 }}
