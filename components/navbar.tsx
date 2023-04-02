@@ -109,7 +109,7 @@ function ResponsiveAppBar() {
                   //   router.push(`/${redirects[i]}`);
                   // }}
                 >
-                  <Link href={redirects[i]} scroll={false}>
+                  <Link key={i} href={redirects[i]} scroll={redirects[i] == '/'}>
                     <Typography
                       textAlign="center"
                       sx={{
@@ -118,7 +118,7 @@ function ResponsiveAppBar() {
                         fontFamily: "Merriweather",
                       }}
                     >
-                      {page}
+                      {page}test
                     </Typography>
                   </Link>
                 </MenuItem>
@@ -148,9 +148,10 @@ function ResponsiveAppBar() {
           >
             Oneiros
           </Typography> */}
+          
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {pages.map((page, i) => (
-              <Link key={i} href={redirects[i]} scroll={false}>
+              <Link key={i} href={redirects[i]} scroll={redirects[i] == '/'}>
                 <Typography
                   textAlign="center"
                   sx={{ fontWeight: 300 }}
