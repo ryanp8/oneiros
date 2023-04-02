@@ -41,7 +41,7 @@ export default function Home() {
           }}
         >
           <Typography variant="h1" textAlign="center">
-            Oneiros
+            The Oneiros Project
           </Typography>
           <Typography variant="h3" textAlign="center" fontWeight={100}>
             A student-run multimedia startup based out of Northwestern
