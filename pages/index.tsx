@@ -40,10 +40,10 @@ export default function Home() {
             // flexDirection: "column",
           }}
         >
-          <Typography variant="h1" textAlign="center">
+          <Typography variant={windowWidth > 800 ? "h1":"h2"} fontFamily="Merriweather" textAlign="center">
             The Oneiros Project
           </Typography>
-          <Typography variant="h3" textAlign="center" fontWeight={100}>
+          <Typography variant={windowWidth > 800 ? "h3":"h5"}  fontFamily="Merriweather" textAlign="center" fontWeight={100} marginTop={3}>
             A student-run multimedia startup based out of Northwestern
             University
           </Typography>
@@ -60,7 +60,7 @@ export default function Home() {
                   borderRadius: 4,
                 }}
               >
-                <Typography fontSize={24}>Our Work</Typography>
+                <Typography fontSize={24} fontFamily="Merriweather">Our Work</Typography>
               </Box>
             </Link>
           </Container>
@@ -83,7 +83,7 @@ export default function Home() {
         }}
       >
         <Container sx={{ color: "white" }}>
-          <Typography variant="h2" textAlign="center">
+          <Typography variant="h2" fontFamily="Merriweather" textAlign="center">
             Releases
           </Typography>
         </Container>
@@ -98,7 +98,7 @@ export default function Home() {
         }}
       >
         <Container sx={{ color: "white" }}>
-          <Typography variant="h2" textAlign="center">
+          <Typography variant="h2" fontFamily="Merriweather" textAlign="center">
             About Us
           </Typography>
         </Container>

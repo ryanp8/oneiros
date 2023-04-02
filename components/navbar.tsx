@@ -112,7 +112,11 @@ function ResponsiveAppBar() {
                   <Link href={redirects[i]} scroll={false}>
                     <Typography
                       textAlign="center"
-                      sx={{ fontWeight: 300, color: "black" }}
+                      sx={{
+                        fontWeight: 300,
+                        color: "black",
+                        fontFamily: "Merriweather",
+                      }}
                     >
                       {page}
                     </Typography>
@@ -152,6 +156,7 @@ function ResponsiveAppBar() {
                   sx={{ fontWeight: 300 }}
                   color="black"
                   padding={2}
+                  fontFamily="Merriweather"
                 >
                   {page}
                 </Typography>
