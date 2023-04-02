@@ -14,9 +14,12 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
 import { useRouter } from "next/router";
+import Image from "next/image";
+import logo from "../public/logo.png";
+import Link from "next/link";
 
-const pages = ["Home", "Productions", "Who we are"];
-const redirects = ["/", "productions", "about"];
+const pages = ["Home", "Releases", "About Us"];
+const redirects = ["/", "#releases", "#about"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -33,16 +36,25 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ background: "black" }}>
+    <AppBar
+      position="sticky"
+      sx={{ margin: 0, padding: 0, background: "white", width: "100vw" }}
+    >
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
           sx={{
             display: "flex",
             justifyContent: "space-between",
+            // background: 'black'
           }}
         >
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+            <Link href="/">
+              <Image src={logo} alt="logo" width={50} height={50}></Image>
+            </Link>
+          </Box>
           {/* <Typography
             variant="h5"
             noWrap
@@ -67,7 +79,7 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{ color: "black" }}
             >
               <MenuIcon />
             </IconButton>
@@ -92,20 +104,30 @@ function ResponsiveAppBar() {
               {pages.map((page, i) => (
                 <MenuItem
                   key={page}
-                  onClick={() => {
-                    handleCloseNavMenu();
-                    router.push(`/${redirects[i]}`);
-                  }}
+                  // onClick={() => {
+                  //   handleCloseNavMenu();
+                  //   router.push(`/${redirects[i]}`);
+                  // }}
                 >
-                  <Typography textAlign="center" sx={{ fontWeight: 300 }}>
-                    {page}
-                  </Typography>
+                  <Link href={redirects[i]} scroll={false}>
+                    <Typography
+                      textAlign="center"
+                      sx={{ fontWeight: 300, color: "black" }}
+                    >
+                      {page}
+                    </Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
+          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+            <Link href="/">
+              <Image src={logo} alt="logo" width={50} height={50}></Image>
+            </Link>
+          </Box>
+
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -116,29 +138,39 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "black",
               textDecoration: "none",
             }}
           >
             Oneiros
-          </Typography>
+          </Typography> */}
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {pages.map((page, i) => (
-              <Button
-                key={page}
-                onClick={() => {
-                  handleCloseNavMenu();
-                  router.push(`/${redirects[i]}`);
-                }}
-                sx={{
-                  my: 2,
-                  color: "white",
-                  display: "block",
-                  fontWeight: 400,
-                }}
-              >
-                {page}
-              </Button>
+              <Link href={redirects[i]} scroll={false}>
+                <Typography
+                  textAlign="center"
+                  sx={{ fontWeight: 300 }}
+                  color="black"
+                  padding={2}
+                >
+                  {page}
+                </Typography>
+              </Link>
+              // <Button
+              //   key={page}
+              //   onClick={() => {
+              //     handleCloseNavMenu();
+              //     router.push(`/${redirects[i]}`);
+              //   }}
+              //   sx={{
+              //     my: 2,
+              //     color: "black",
+              //     display: "block",
+              //     fontWeight: 400,
+              //   }}
+              // >
+              //   {page}
+              // </Button>
             ))}
           </Box>
         </Toolbar>

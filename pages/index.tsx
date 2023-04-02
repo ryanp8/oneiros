@@ -1,8 +1,17 @@
 import React from "react";
-import { Container, Typography, Box, useMediaQuery } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  useMediaQuery,
+  Button,
+} from "@mui/material";
 import Navbar from "../components/navbar";
 import Image from "next/image";
-import testImg from "../public/IMG_0422.jpg";
+import background from "../public/background.jpeg";
+import Link from "next/link";
+
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function Home() {
   // const breakpoint = useMediaQuery(('max-width: 900px'));
@@ -13,63 +22,87 @@ export default function Home() {
   });
 
   return (
-    <Container
-      sx={{ minWidth: "100%", minHeight: "100vh", background: "black" }}
-    >
+    <>
       <Navbar />
-      <h1>Oneiros</h1>
       <Container
         sx={{
-          minWidth: "100%",
+          height: "95vh",
           display: "flex",
-          flexDirection: windowWidth < 900 ? "column" : "row",
+          flexDirection: "column",
+          justifyContent: "space-around",
         }}
       >
-        <Box
+        <Container
           sx={{
-            maxWidth: windowWidth < 900 ? "100%" : "50%",
-            // marginBottom: windowWidth < 900 ? "20" : "0",
-            marginTop: windowWidth < 900 ? 5 : 0,
-            marginBottom: windowWidth < 900 ? 5 : 0,
-            wbackgroundColor: "red",
+            marginTop: 15,
+            // display: "flex",
+            // alignItems: "center",
+            // flexDirection: "column",
           }}
         >
-          <Typography
-            variant="h1"
-            color="white"
-            sx={{
-              textAlign: windowWidth < 900 ? "center" : "left",
-              marginBottom: windowWidth < 900 ? 5 : 3,
-            }}
-          >
-            The Oneiros Project
+          <Typography variant="h1" textAlign="center">
+            Oneiros
           </Typography>
-          <Typography
-            variant="h4"
-            color="white"
-            sx={{
-              fontWeight: 300,
-              textAlign: windowWidth < 900 ? "center" : "left",
-            }}
-          >
-            A multimedia production startup from Northwestern University
-            currently working on audio dramas.
+          <Typography variant="h3" textAlign="center" fontWeight={100}>
+            A student-run multimedia startup based out of Northwestern
+            University
           </Typography>
-        </Box>
-        <Box
-          sx={{
-            flexGrow: 1,
-            // width: 'full',
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            // backgroundColor: 'red'
-          }}
-        >
-          {/* <Typography variant="h1" color="white">An image should go here</Typography> */}
-          <Image src={testImg} alt="test image"></Image>
-        </Box>
+        </Container>
+        <Container>
+          <Container sx={{ display: "flex", justifyContent: "center" }}>
+            <Link href="#releases" scroll={false}>
+              <Box
+                sx={{
+                  background: "#ff9a03",
+                  color: "white",
+                  paddingX: 4,
+                  paddingY: 1,
+                  borderRadius: 4,
+                }}
+              >
+                <Typography fontSize={24}>Our Work</Typography>
+              </Box>
+            </Link>
+          </Container>
+          <Container
+            sx={{ display: "flex", justifyContent: "center", marginTop: 3 }}
+          >
+            <Link href="https://www.instagram.com/the.oneiros.project/">
+              <InstagramIcon fontSize="large"></InstagramIcon>
+            </Link>
+          </Container>
+        </Container>
       </Container>
-    </Container>
+      <Box
+        id="releases"
+        sx={{
+          margin: 0,
+          padding: "5%",
+          height: "100vh",
+          background: "#ff9a03",
+        }}
+      >
+        <Container sx={{ color: "white" }}>
+          <Typography variant="h2" textAlign="center">
+            Releases
+          </Typography>
+        </Container>
+      </Box>
+      <Box
+        id="about"
+        sx={{
+          margin: 0,
+          padding: "5%",
+          height: "100vh",
+          background: "#048fd4",
+        }}
+      >
+        <Container sx={{ color: "white" }}>
+          <Typography variant="h2" textAlign="center">
+            About Us
+          </Typography>
+        </Container>
+      </Box>
+    </>
   );
 }
