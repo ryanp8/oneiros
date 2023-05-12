@@ -118,7 +118,7 @@ function ResponsiveAppBar() {
                         fontFamily: "Merriweather",
                       }}
                     >
-                      {page}test
+                      {page}
                     </Typography>
                   </Link>
                 </MenuItem>
