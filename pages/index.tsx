@@ -86,6 +86,7 @@ const people: Bio[] = [
 interface Release {
   name: string;
   img: StaticImageData;
+  logline?: String;
   description: string;
   url?: string;
   embedPlayer?: ReactJSXElement;
@@ -95,12 +96,18 @@ const releases: Release[] = [
   {
     name: "Pursuit of the Bitter End",
     img: pbeImg,
-    description: "Description",
+    logline:
+      "Back in the Old West, two men are fated to hunt each other, both seeing themselves as the hero.",
+    description:
+      "Henry Alhborn has been accused of a crime he's adamant he didn't commit, and Walter Hall is determined to bring him to justice. When the stakes turn personal, it becomes clear that only one man will walk away.",
   },
   {
     name: "Doctor Sparky's Rocket Fuel",
     img: pbeImg,
-    description: "Description",
+    logline:
+      "The hosts of Hollywood's Best Idea Yet conduct an ad read for Doctor Sparky's Rocket Fuel, an energy drink with a \"daring new mix of vitamins,\" and a growing list of side effects.",
+    description:
+      "The hosts of Hollywood's Best Idea Yet conduct an ad read for Doctor Sparky's Rocket Fuel, an energy drink with a \"daring new mix of vitamins,\" and a growing list of side effects.",
     embedPlayer: (
       <iframe
         src="https://embed.acast.com/653f005b18e0ae0011387407?feed=true"
@@ -175,6 +182,10 @@ export default function Home() {
               sx={{ mt: 2, color: "white" }}
             >
               {modalRelease.description}
+            </Typography>
+            <Typography fontSize={11} color="#dddddd" fontFamily="Merriweather" marginTop={8}>
+              Note: This audio short is a work of fiction. Any similarities to
+              real-life companies or people are purely coincidental.
             </Typography>
           </Box>
         ) : (
@@ -255,7 +266,7 @@ export default function Home() {
           // background: "#ff9a03",
           // backgroundImage: `linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%)`,
           background: "#ff9a03",
-          backgroundImage: `linear-gradient(130deg, rgba(255,154,3,1) 0%, rgba(255,211,148,1) 100%)`,
+          backgroundImage: `linear-gradient(330deg, rgba(255,154,3,1) 0%, rgba(255,211,148,1) 100%)`,
         }}
       >
         <Container sx={{ color: "white" }}>
@@ -289,10 +300,11 @@ export default function Home() {
                       <Typography
                         fontWeight={100}
                         fontFamily="Merriweather"
-                        fontSize={14}
+                        fontSize={12}
                         textAlign="center"
+                        marginY={1}
                       >
-                        {r.description}
+                        {r.logline}
                       </Typography>
                     </ReleaseCard>
                   </>
