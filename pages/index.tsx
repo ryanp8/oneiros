@@ -174,17 +174,17 @@ export default function Home() {
             >
               {modalRelease.name}
             </Typography>
-            {modalRelease.embedPlayer && modalRelease.embedPlayer}
             <Typography
               id="modal-modal-description"
               fontFamily="Merriweather"
               fontWeight={100}
               fontSize={14}
-              sx={{ mt: 2, color: "white" }}
+              sx={{ my: 3, color: "white" }}
             >
               {modalRelease.description}
             </Typography>
-            <Typography fontSize={11} color="#dddddd" fontFamily="Merriweather" marginTop={8}>
+            {modalRelease.embedPlayer && modalRelease.embedPlayer}
+            <Typography fontSize={11} color="#dddddd" fontFamily="Merriweather" marginTop={4}>
               Note: This audio short is a work of fiction. Any similarities to
               real-life companies or people are purely coincidental.
             </Typography>
