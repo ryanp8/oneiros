@@ -44,7 +44,7 @@ const people: Bio[] = [
     img: zachImg,
     role: "Founder, Writer, Director, Actor, Producer",
     description:
-      "Zachary is 1st year film and computer science student who founded the Oneiros Project. He's working in a little bit of each facet of the group, and is looking forward to telling interesting and fun stories!",
+      "Zachary is second-year film and computer science student who founded the Oneiros Project. He's working in a little bit of each facet of the group, and is looking forward to telling interesting and fun stories!",
   },
   {
     name: "Renee Corriveau",
@@ -63,16 +63,16 @@ const people: Bio[] = [
   {
     name: "Mira Norman",
     img: normanImg,
-    role: "Actor, Script Editor",
+    role: "Actor",
     description:
-      "Mira is a 1st year materials engineering student that helps out with voice acting and script editing. They are very excited to see the final projects for Oneiros!",
+      "Mira is a first-year materials engineering student that helps out with voice acting and script editing. They are very excited to see the final projects for Oneiros!",
   },
   {
     name: "Anthony Bartolomei",
-    role: "General Manager, Editor",
+    role: "Editor",
     img: anthonyImg,
     description:
-      "Anthony is a 2nd year engineering student who's joined the Oneiros project this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
+      "Anthony is a third-year engineering student who's joined the Oneiros project this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
   },
   {
     name: "Siddharth Gupta",
@@ -179,6 +179,7 @@ export default function Home() {
               id="modal-modal-description"
               fontFamily="Merriweather"
               fontWeight={100}
+              fontSize={14}
               sx={{ mt: 2, color: "white" }}
             >
               {modalRelease.description}
@@ -266,7 +267,7 @@ export default function Home() {
           // background: "#ff9a03",
           // backgroundImage: `linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%)`,
           background: "#ff9a03",
-          backgroundImage: `linear-gradient(330deg, rgba(255,154,3,1) 0%, rgba(255,211,148,1) 100%)`,
+          backgroundImage: "linear-gradient(90deg, rgba(255,198,79,1) 0%, rgba(255,144,3,1) 100%)"
         }}
       >
         <Container sx={{ color: "white" }}>
