@@ -29,14 +29,7 @@ import anthonyImg from "../public/headshots/Senior_Picture - Anthony Bartolomei.
 import sidImg from "../public/headshots/SG_Oneiros_Profile - Siddharth Gupta.jpg";
 
 import pbeImg from "../public/pbeCover.png";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  // ...theme.typography.body2,
-  // padding: theme.spacing(1),
-  // textAlign: 'center',
-  // color: theme.palette.text.secondary,
-}));
+import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 
 interface Bio {
   name: String;
@@ -95,6 +88,7 @@ interface Release {
   img: StaticImageData;
   description: string;
   url?: string;
+  embedPlayer?: ReactJSXElement;
 }
 
 const releases: Release[] = [
@@ -102,6 +96,19 @@ const releases: Release[] = [
     name: "Pursuit of the Bitter End",
     img: pbeImg,
     description: "Description",
+  },
+  {
+    name: "Doctor Sparky's Rocket Fuel",
+    img: pbeImg,
+    description: "Description",
+    embedPlayer: (
+      <iframe
+        src="https://embed.acast.com/653f005b18e0ae0011387407?feed=true"
+        frameBorder="0"
+        width="100%"
+        height="280px"
+      ></iframe>
+    ),
   },
 ];
 
@@ -111,10 +118,12 @@ const modalStyle = (w: number) => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    backgroundColor: "#545459",
+    backgroundColor: "#263950",
     p: 3,
     borderRadius: 5,
     outline: "none",
+    overflow: "scroll",
+    height: "70vh",
   };
 };
 
@@ -139,9 +148,9 @@ export default function Home() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={modalStyle(windowWidth)}>
-          {modalRelease && (
-            <Box sx={{ borderRadius: 5, overflow: 'hidden' }}>
+        {modalRelease ? (
+          <Box sx={modalStyle(windowWidth)}>
+            <Box sx={{ borderRadius: 5, overflow: "hidden" }}>
               <Image
                 src={modalRelease.img}
                 alt={modalRelease.name}
@@ -149,32 +158,36 @@ export default function Home() {
                 height={windowWidth > 900 ? 400 : windowWidth * 0.6}
               ></Image>
             </Box>
-          )}
-          <Typography
-            id="modal-modal-title"
-            sx={{ color: "white" }}
-            fontFamily="Monospace"
-            variant="h6"
-            component="h2"
-          >
-            {modalRelease?.name}
-          </Typography>
-          <Typography
-            id="modal-modal-description"
-            fontFamily="Merriweather"
-            fontWeight={100}
-            sx={{ mt: 2, color: "white" }}
-          >
-            {modalRelease?.description}
-          </Typography>
-        </Box>
+            <Typography
+              id="modal-modal-title"
+              sx={{ color: "white", marginY: 2 }}
+              fontFamily="Monospace"
+              variant="h6"
+              component="h2"
+            >
+              {modalRelease.name}
+            </Typography>
+            {modalRelease.embedPlayer && modalRelease.embedPlayer}
+            <Typography
+              id="modal-modal-description"
+              fontFamily="Merriweather"
+              fontWeight={100}
+              sx={{ mt: 2, color: "white" }}
+            >
+              {modalRelease.description}
+            </Typography>
+          </Box>
+        ) : (
+          <></>
+        )}
       </Modal>
-      <Container
+      <Box
         sx={{
           height: "95vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
+          backgroundImage: `linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%)`,
         }}
       >
         <Container
@@ -190,6 +203,7 @@ export default function Home() {
             fontFamily="Courier"
             fontWeight={100}
             textAlign="center"
+            color="#555555"
           >
             The Oneiros Project
           </Typography>
@@ -199,6 +213,7 @@ export default function Home() {
             textAlign="center"
             fontWeight={100}
             marginTop={3}
+            color="#ffffff"
           >
             A student-run multimedia startup based out of Northwestern
             University
@@ -230,14 +245,17 @@ export default function Home() {
             </Link>
           </Container>
         </Container>
-      </Container>
+      </Box>
       <Box
         id="releases"
         sx={{
           margin: 0,
           padding: "5%",
           minHeight: "100vh",
+          // background: "#ff9a03",
+          // backgroundImage: `linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%)`,
           background: "#ff9a03",
+          backgroundImage: `linear-gradient(130deg, rgba(255,154,3,1) 0%, rgba(255,211,148,1) 100%)`,
         }}
       >
         <Container sx={{ color: "white" }}>
@@ -290,7 +308,8 @@ export default function Home() {
           margin: 0,
           padding: "5%",
           minHeight: "100vh",
-          background: "#048fd4",
+          // background: "#048fd4",
+          background: `linear-gradient(90deg, rgba(4,143,212,1) 0%, rgba(0,71,106,1) 100%)`,
         }}
       >
         <Container sx={{ color: "white" }}>
