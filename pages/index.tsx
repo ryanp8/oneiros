@@ -65,7 +65,7 @@ const people: Bio[] = [
     role: "Video Editor",
     img: breannaImg,
     description:
-      "Breanna, a first-year RTVF student, has recently become part of the Oneiros project, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
+      "Breanna is a first-year RTVF student and has recently become part of the Oneiros project, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
   },
   {
     name: "Siddharth Gupta",
