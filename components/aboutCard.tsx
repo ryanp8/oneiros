@@ -11,9 +11,13 @@ const AboutCard = ({ ...props }) => {
       md={props.md}
       sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <Box sx={{ borderRadius: '50%', overflow: 'hidden'}}>
-        <Image src={props.img} alt="headshot" width={150} height={150}></Image>
-      </Box>
+      <Image
+        src={props.img}
+        alt="headshot"
+        width={150}
+        height={150}
+        style={{ borderRadius: "50%" }}
+      ></Image>
       {props.children}
     </Grid>
   );

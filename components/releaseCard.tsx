@@ -14,17 +14,17 @@ const ReleaseCard = ({ ...props }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        cursor: 'pointer'
+        cursor: props.released ? "" : "pointer",
       }}
     >
-      {/* <Button
-        onClick={props.onClick}
-      > */}
-      <Box sx={{ borderRadius: 10, overflow: "hidden" }}>
-        <Image src={props.img} alt="headshot" width={200} height={200}></Image>
-      </Box>
+      <Image
+        src={props.img}
+        alt="headshot"
+        width={200}
+        height={200}
+        style={{ borderRadius: 40, padding: 10 }}
+      ></Image>
       {props.children}
-      {/* </Button> */}
     </Grid>
   );
 };

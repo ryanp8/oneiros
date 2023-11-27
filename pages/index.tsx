@@ -17,18 +17,18 @@ import Link from "next/link";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import AboutCard from "../components/aboutCard";
 import ReleaseCard from "../components/releaseCard";
-
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
+import Carousel from "../components/carousel";
 
 import zachImg from "../public/headshots/IMG_5443 - Zachary Braffman.jpg";
 import reneeImg from "../public/headshots/Corriveau photo - Renee Corriveau.jpg";
 import adamImg from "../public/headshots/A26E2D8D-B52C-4CBD-848C-57930AAD9992 - Adam Durr.jpeg";
-import normanImg from "../public/headshots/190E6BFB-34CD-47A6-84BB-52C211E60AC2 (1) - Mira Norman.jpeg";
 import anthonyImg from "../public/headshots/Senior_Picture - Anthony Bartolomei.jpg";
 import sidImg from "../public/headshots/SG_Oneiros_Profile - Siddharth Gupta.jpg";
+import breannaImg from "../public/headshots/KakaoTalk_Photo_2023-06-17-04-07-44 - Breanna Lee.jpeg";
 
 import pbeImg from "../public/pbeCover.png";
+import pbeImg2 from "../public/pbe2.jpeg";
+import drSparkyImg from "../public/DrSparkysBlack.jpeg";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 
 interface Bio {
@@ -58,21 +58,14 @@ const people: Bio[] = [
     img: adamImg,
     role: "Writer",
     description:
-      "Adam is a first-year student studying political science. He has creative writing experience from programs at Interlochen Arts Academy, and joined Oneiros as a writer in the fall of 2022. He is currently working on several projects, and is very excited to see where they go!",
+      "Adam is a second-year student studying political science. He has creative writing experience from programs at Interlochen Arts Academy, and joined Oneiros as a writer in the fall of 2022. He is currently working on several projects, and is very excited to see where they go!",
   },
   {
-    name: "Mira Norman",
-    img: normanImg,
-    role: "Actor",
+    name: "Breanna Lee",
+    role: "Video Editor",
+    img: breannaImg,
     description:
-      "Mira is a first-year materials engineering student that helps out with voice acting and script editing. They are very excited to see the final projects for Oneiros!",
-  },
-  {
-    name: "Anthony Bartolomei",
-    role: "Editor",
-    img: anthonyImg,
-    description:
-      "Anthony is a third-year engineering student who's joined the Oneiros project this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
+      "Breanna, a first-year RTVF student, has recently become part of the Oneiros project, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
   },
   {
     name: "Siddharth Gupta",
@@ -80,6 +73,13 @@ const people: Bio[] = [
     img: sidImg,
     description:
       "Siddharth is a filmmaker, illustrator, and podcaster currently studying as a Master's student in Northwestern University's Leadership for Creative Enterprises program, designed to provide a comprehensive business administration education tailored to the arts and entertainment field. At Oneiros, they're leveraging their animation, filmmaking, and podcasting experiences to help manifest our stories through their multimedia production skills, providing research support, script and audio editing, and voice acting. They are also the host and producer of Manga Mavericks, a podcast and media outlet dedicated to discussing manga as a medium and an industry. They love bringing together and collaborating with their fellow creatives, combining their individual talents and expertises to create and share stories with audiences who'll be inspired by them to tell their own.",
+  },
+  {
+    name: "Anthony Bartolomei",
+    role: "Editor",
+    img: anthonyImg,
+    description:
+      "Anthony is a third-year engineering student who's joined the Oneiros project this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
   },
 ];
 
@@ -90,20 +90,26 @@ interface Release {
   description: string;
   url?: string;
   embedPlayer?: ReactJSXElement;
+  released?: boolean;
+  descriptionImgs: StaticImageData[];
+  artCredits?: string[];
 }
 
 const releases: Release[] = [
   {
     name: "Pursuit of the Bitter End",
     img: pbeImg,
+    descriptionImgs: [pbeImg, pbeImg2],
     logline:
       "Back in the Old West, two men are fated to hunt each other, both seeing themselves as the hero.",
     description:
       "Henry Alhborn has been accused of a crime he's adamant he didn't commit, and Walter Hall is determined to bring him to justice. When the stakes turn personal, it becomes clear that only one man will walk away.",
+    released: false,
   },
   {
     name: "Doctor Sparky's Rocket Fuel",
-    img: pbeImg,
+    img: drSparkyImg,
+    descriptionImgs: [drSparkyImg],
     logline:
       "The hosts of Hollywood's Best Idea Yet conduct an ad read for Doctor Sparky's Rocket Fuel, an energy drink with a \"daring new mix of vitamins,\" and a growing list of side effects.",
     description:
@@ -116,6 +122,7 @@ const releases: Release[] = [
         height="280px"
       ></iframe>
     ),
+    artCredits: ["@NyazureDreams"],
   },
 ];
 
@@ -157,14 +164,20 @@ export default function Home() {
       >
         {modalRelease ? (
           <Box sx={modalStyle(windowWidth)}>
-            <Box sx={{ borderRadius: 5, overflow: "hidden" }}>
-              <Image
-                src={modalRelease.img}
-                alt={modalRelease.name}
-                width={windowWidth > 900 ? 400 : windowWidth * 0.6}
-                height={windowWidth > 900 ? 400 : windowWidth * 0.6}
-              ></Image>
-            </Box>
+            <Carousel
+              steps={modalRelease.descriptionImgs.map((img, i) => {
+                return (
+                  <Image
+                    key={i}
+                    src={img}
+                    alt={modalRelease.name}
+                    style={{ borderRadius: 20 }}
+                    width={windowWidth > 900 ? 400 : windowWidth * 0.6}
+                    height={windowWidth > 900 ? 400 : windowWidth * 0.6}
+                  ></Image>
+                );
+              })}
+            ></Carousel>
             <Typography
               id="modal-modal-title"
               sx={{ color: "white", marginY: 2 }}
@@ -184,7 +197,22 @@ export default function Home() {
               {modalRelease.description}
             </Typography>
             {modalRelease.embedPlayer && modalRelease.embedPlayer}
-            <Typography fontSize={11} color="#dddddd" fontFamily="Merriweather" marginTop={4}>
+            {modalRelease.artCredits && (
+              <Typography
+                fontSize={11}
+                color="#dddddd"
+                fontFamily="Merriweather"
+                marginTop={4}
+              >
+                Art by: {modalRelease.artCredits.join(" ")}.
+              </Typography>
+            )}
+            <Typography
+              fontSize={11}
+              color="#dddddd"
+              fontFamily="Merriweather"
+              marginTop={4}
+            >
               Note: This audio short is a work of fiction. Any similarities to
               real-life companies or people are purely coincidental.
             </Typography>
@@ -267,7 +295,8 @@ export default function Home() {
           // background: "#ff9a03",
           // backgroundImage: `linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%)`,
           background: "#ff9a03",
-          backgroundImage: "linear-gradient(90deg, rgba(255,198,79,1) 0%, rgba(255,144,3,1) 100%)"
+          backgroundImage:
+            "linear-gradient(90deg, rgba(255,198,79,1) 0%, rgba(255,144,3,1) 100%)",
         }}
       >
         <Container sx={{ color: "white" }}>
@@ -278,37 +307,47 @@ export default function Home() {
             <Grid container spacing={6}>
               {releases.map((r, i) => {
                 return (
-                  <>
-                    <ReleaseCard
-                      xs={12}
-                      sm={6}
-                      md={4}
-                      img={r.img}
-                      key={i}
-                      onClick={() => {
+                  <ReleaseCard
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    img={r.img}
+                    key={i}
+                    released={
+                      r.released === undefined
+                        ? false
+                        : (!r.released as boolean)
+                    }
+                    onClick={() => {
+                      if (r.released === undefined || r.released) {
                         setModalRelease(r);
                         setModalOpen(true);
-                      }}
+                      }
+                    }}
+                  >
+                    {!(r.released === undefined || r.released) && (
+                      <Typography color="red" fontWeight={800}>
+                        Coming Soon!
+                      </Typography>
+                    )}
+                    <Typography
+                      fontWeight={400}
+                      textAlign="center"
+                      fontFamily="Merriweather"
+                      fontSize={24}
                     >
-                      <Typography
-                        fontWeight={400}
-                        textAlign="center"
-                        fontFamily="Merriweather"
-                        fontSize={24}
-                      >
-                        {r.name}
-                      </Typography>
-                      <Typography
-                        fontWeight={100}
-                        fontFamily="Merriweather"
-                        fontSize={12}
-                        textAlign="center"
-                        marginY={1}
-                      >
-                        {r.logline}
-                      </Typography>
-                    </ReleaseCard>
-                  </>
+                      {r.name}
+                    </Typography>
+                    <Typography
+                      fontWeight={100}
+                      fontFamily="Merriweather"
+                      fontSize={12}
+                      textAlign="center"
+                      marginY={1}
+                    >
+                      {r.logline}
+                    </Typography>
+                  </ReleaseCard>
                 );
               })}
             </Grid>
