@@ -61,19 +61,19 @@ const people: Bio[] = [
   //     "Breanna is a first-year RTVF student and has recently become part of Fable Mason Studios, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
   // },
   {
-    name: "Siddharth Gupta",
-    role: "Project Manager",
-    img: sidImg,
-    description:
-      "Siddharth is a filmmaker, illustrator, and podcaster currently studying as a Master's student in Northwestern University's Leadership for Creative Enterprises program, designed to provide a comprehensive business administration education tailored to the arts and entertainment field. At Fable Mason Studios, they're leveraging their animation, filmmaking, and podcasting experiences to help manifest our stories through their multimedia production skills, providing research support, script and audio editing, and voice acting. They are also the host and producer of Manga Mavericks, a podcast and media outlet dedicated to discussing manga as a medium and an industry. They love bringing together and collaborating with their fellow creatives, combining their individual talents and expertises to create and share stories with audiences who'll be inspired by them to tell their own.",
-  },
-  {
     name: "Renee Corriveau",
     img: reneeImg,
     role: "Production Coordinator",
     description:
       "Renee is a graduate creative leadership student at Northwestern who joined Fable Mason Studios in 2023. She works in a variety of roles including script editor, sound engineer and assists with coordination of all stages of production. Her favorite role is proponent of unsolicited movie recommendations.",
   },
+  {
+    name: "Siddharth Gupta",
+    role: "Project Manager",
+    img: sidImg,
+    description:
+      "Siddharth is a filmmaker, illustrator, and podcaster currently studying as a Master's student in Northwestern University's Leadership for Creative Enterprises program, designed to provide a comprehensive business administration education tailored to the arts and entertainment field. At Fable Mason Studios, they're leveraging their animation, filmmaking, and podcasting experiences to help manifest our stories through their multimedia production skills, providing research support, script and audio editing, and voice acting. They are also the host and producer of Manga Mavericks, a podcast and media outlet dedicated to discussing manga as a medium and an industry. They love bringing together and collaborating with their fellow creatives, combining their individual talents and expertises to create and share stories with audiences who'll be inspired by them to tell their own.",
+  }
   // {
   //   name: "Anthony Bartolomei",
   //   role: "Editor",
