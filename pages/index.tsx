@@ -18,6 +18,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import AboutCard from "../components/aboutCard";
 import ReleaseCard from "../components/releaseCard";
 import Carousel from "../components/carousel";
+// import Iterative from "../components/iterativeText";
+
 
 import zachImg from "../public/headshots/IMG_5443 - Zachary Braffman.jpg";
 import reneeImg from "../public/headshots/Corriveau photo - Renee Corriveau.jpg";
@@ -98,8 +100,8 @@ interface Release {
 const releases: Release[] = [
   {
     name: "Pursuit of the Bitter End",
-    img: pbeImg,
-    descriptionImgs: [pbeImg, pbeImg2],
+    img: pbeImg2,
+    descriptionImgs: [pbeImg2, pbeImg],
     logline:
       "Back in the Old West, two men are fated to hunt each other, both seeing themselves as the hero.",
     description:
