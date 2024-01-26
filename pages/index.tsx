@@ -60,13 +60,13 @@ const people: Bio[] = [
     description:
       "Adam is a second-year student studying political science. He has creative writing experience from programs at Interlochen Arts Academy, and joined Fable Mason Studios as a writer in the fall of 2022. He is currently working on several projects, and is very excited to see where they go!",
   },
-  {
-    name: "Breanna Lee",
-    role: "Video Editor",
-    img: breannaImg,
-    description:
-      "Breanna is a first-year RTVF student and has recently become part of Fable Mason Studios, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
-  },
+  // {
+  //   name: "Breanna Lee",
+  //   role: "Video Editor",
+  //   img: breannaImg,
+  //   description:
+  //     "Breanna is a first-year RTVF student and has recently become part of Fable Mason Studios, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
+  // },
   {
     name: "Siddharth Gupta",
     role: "Project Manager",
@@ -74,13 +74,13 @@ const people: Bio[] = [
     description:
       "Siddharth is a filmmaker, illustrator, and podcaster currently studying as a Master's student in Northwestern University's Leadership for Creative Enterprises program, designed to provide a comprehensive business administration education tailored to the arts and entertainment field. At Fable Mason Studios, they're leveraging their animation, filmmaking, and podcasting experiences to help manifest our stories through their multimedia production skills, providing research support, script and audio editing, and voice acting. They are also the host and producer of Manga Mavericks, a podcast and media outlet dedicated to discussing manga as a medium and an industry. They love bringing together and collaborating with their fellow creatives, combining their individual talents and expertises to create and share stories with audiences who'll be inspired by them to tell their own.",
   },
-  {
-    name: "Anthony Bartolomei",
-    role: "Editor",
-    img: anthonyImg,
-    description:
-      "Anthony is a third-year engineering student who's joined Fable Mason Studios this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
-  },
+  // {
+  //   name: "Anthony Bartolomei",
+  //   role: "Editor",
+  //   img: anthonyImg,
+  //   description:
+  //     "Anthony is a third-year engineering student who's joined Fable Mason Studios this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
+  // },
 ];
 
 interface Release {
