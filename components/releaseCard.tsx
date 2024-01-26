@@ -14,7 +14,7 @@ const ReleaseCard = ({ ...props }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        cursor: props.released ? "" : "pointer",
+        cursor: "pointer",
       }}
     >
       <Image
