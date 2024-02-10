@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 
 import { useRouter } from "next/router";
 import Image from "next/image";
-import logo from "../public/logo.png";
+import logo from "../public/Fable Mason Logo Compressed.png";
 import Link from "next/link";
 
 const pages = ["Home", "Releases", "About Us"];
