@@ -18,8 +18,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import AboutCard from "../components/aboutCard";
 import ReleaseCard from "../components/releaseCard";
 import Carousel from "../components/carousel";
-// import Iterative from "../components/iterativeText";
-
+import Iterative from "../components/iterativeText";
 
 import zachImg from "../public/headshots/IMG_5443 - Zachary Braffman.jpg";
 import reneeImg from "../public/headshots/Corriveau photo - Renee Corriveau.jpg";
@@ -27,6 +26,7 @@ import adamImg from "../public/headshots/A26E2D8D-B52C-4CBD-848C-57930AAD9992 - 
 import anthonyImg from "../public/headshots/Senior_Picture - Anthony Bartolomei.jpg";
 import sidImg from "../public/headshots/SG_Oneiros_Profile - Siddharth Gupta.jpg";
 import breannaImg from "../public/headshots/KakaoTalk_Photo_2023-06-17-04-07-44 - Breanna Lee.jpeg";
+import siannaImg from "../public/headshots/IMG_8381 - Sianna Perez.jpg";
 
 import pbeImg from "../public/pbeCover.png";
 import pbeImg2 from "../public/pbe2.jpeg";
@@ -63,6 +63,13 @@ const people: Bio[] = [
   //     "Breanna is a first-year RTVF student and has recently become part of Fable Mason Studios, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
   // },
   {
+    name: "Sianna Perez",
+    role: "Finances",
+    img: siannaImg,
+    description:
+      "Sianna is a first year student studying mathematics who joined Fable Mason Studios to help with project funding and financing. She is working on brainstorming ways to commodify and fund new projects. She is excited to see the growth of upcoming projects and our team!",
+  },
+  {
     name: "Renee Corriveau",
     img: reneeImg,
     role: "Production Coordinator",
@@ -75,7 +82,7 @@ const people: Bio[] = [
     img: sidImg,
     description:
       "Siddharth is a filmmaker, illustrator, and podcaster currently studying as a Master's student in Northwestern University's Leadership for Creative Enterprises program, designed to provide a comprehensive business administration education tailored to the arts and entertainment field. At Fable Mason Studios, they're leveraging their animation, filmmaking, and podcasting experiences to help manifest our stories through their multimedia production skills, providing research support, script and audio editing, and voice acting. They are also the host and producer of Manga Mavericks, a podcast and media outlet dedicated to discussing manga as a medium and an industry. They love bringing together and collaborating with their fellow creatives, combining their individual talents and expertises to create and share stories with audiences who'll be inspired by them to tell their own.",
-  }
+  },
   // {
   //   name: "Anthony Bartolomei",
   //   role: "Editor",
@@ -183,7 +190,11 @@ export default function Home() {
             {!(
               modalRelease.released === undefined || modalRelease.released
             ) && (
-              <Typography color="red" fontWeight={800} style={{textAlign: 'center', marginTop: 8}}>
+              <Typography
+                color="red"
+                fontWeight={800}
+                style={{ textAlign: "center", marginTop: 8 }}
+              >
                 Coming Soon!
               </Typography>
             )}
@@ -205,7 +216,6 @@ export default function Home() {
             >
               {modalRelease.description}
             </Typography>
-            {modalRelease.embedPlayer && modalRelease.embedPlayer}
             {modalRelease.artCredits && (
               <Typography
                 fontSize={11}
@@ -216,6 +226,7 @@ export default function Home() {
                 Art by: {modalRelease.artCredits.join(" ")}.
               </Typography>
             )}
+            {modalRelease.embedPlayer && modalRelease.embedPlayer}
             <Typography
               fontSize={11}
               color="#dddddd"
@@ -236,7 +247,7 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
-          backgroundImage: `linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%)`,
+          backgroundImage: `linear-gradient(0deg, #8c6234 0%, #2f4050 100%)`,
         }}
       >
         <Container
@@ -252,9 +263,9 @@ export default function Home() {
             fontFamily="Courier"
             fontWeight={100}
             textAlign="center"
-            color="#555555"
+            color="#ffffff"
           >
-            Fable Mason Studios
+            <Iterative text="Fable Mason Studios" />
           </Typography>
           <Typography
             variant={windowWidth > 800 ? "h3" : "h5"}
@@ -262,7 +273,7 @@ export default function Home() {
             textAlign="center"
             fontWeight={100}
             marginTop={3}
-            color="#ffffff"
+            color="#aaaaaa"
           >
             A student-run multimedia startup based out of Northwestern
             University
@@ -301,18 +312,16 @@ export default function Home() {
           margin: 0,
           padding: "5%",
           minHeight: "100vh",
-          // background: "#ff9a03",
-          // backgroundImage: `linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%)`,
-          background: "#ff9a03",
-          backgroundImage:
-            "linear-gradient(90deg, rgba(255,198,79,1) 0%, rgba(255,144,3,1) 100%)",
+          background: "#fdbb2d",
+          // backgroundImage: `linear-gradient(0deg, #2f4050 0%,  100%)`,
+
         }}
       >
         <Container sx={{ color: "white" }}>
           <Typography variant="h2" fontFamily="Merriweather" textAlign="center">
             Releases
           </Typography>
-          <Box sx={{ flexGrow: 1, marginY: 5 }}>
+          <Box sx={{ flexGrow: 1, marginY: 5, display: 'flex', justifyContent: 'center' }}>
             <Grid container spacing={6}>
               {releases.map((r, i) => {
                 return (
@@ -368,7 +377,7 @@ export default function Home() {
           padding: "5%",
           minHeight: "100vh",
           // background: "#048fd4",
-          background: `linear-gradient(90deg, rgba(4,143,212,1) 0%, rgba(0,71,106,1) 100%)`,
+          background: `linear-gradient(0deg, rgba(1,39,75,1) 0%, rgba(47,64,80,1) 100%);`,
         }}
       >
         <Container sx={{ color: "white" }}>
@@ -379,35 +388,33 @@ export default function Home() {
             <Grid container spacing={6}>
               {people.map((p, i) => {
                 return (
-                  <>
-                    <AboutCard xs={12} sm={6} md={4} img={p.img} key={i}>
-                      <Typography
-                        fontWeight={100}
-                        textAlign="center"
-                        fontFamily="Merriweather"
-                        fontSize={18}
-                      >
-                        {p.name}
-                      </Typography>
-                      <Typography
-                        fontWeight={800}
-                        fontFamily="Merriweather"
-                        fontSize={14}
-                        textAlign="center"
-                        sx={{ marginY: "1em" }}
-                      >
-                        {p.role}
-                      </Typography>
-                      <Typography
-                        fontWeight={100}
-                        fontFamily="Merriweather"
-                        fontSize={14}
-                        textAlign="center"
-                      >
-                        {p.description}
-                      </Typography>
-                    </AboutCard>
-                  </>
+                  <AboutCard xs={12} sm={6} md={4} img={p.img} key={i}>
+                    <Typography
+                      fontWeight={100}
+                      textAlign="center"
+                      fontFamily="Merriweather"
+                      fontSize={18}
+                    >
+                      {p.name}
+                    </Typography>
+                    <Typography
+                      fontWeight={800}
+                      fontFamily="Merriweather"
+                      fontSize={14}
+                      textAlign="center"
+                      sx={{ marginY: "1em" }}
+                    >
+                      {p.role}
+                    </Typography>
+                    <Typography
+                      fontWeight={100}
+                      fontFamily="Merriweather"
+                      fontSize={14}
+                      textAlign="center"
+                    >
+                      {p.description}
+                    </Typography>
+                  </AboutCard>
                 );
               })}
             </Grid>

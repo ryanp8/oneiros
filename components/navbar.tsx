@@ -38,7 +38,7 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="sticky"
-      sx={{ margin: 0, padding: 0, background: "white", width: "100vw" }}
+      sx={{ margin: 0, padding: 0, background: "#2f4050", width: "100vw" }}
     >
       <Container maxWidth="xl">
         <Toolbar
@@ -114,7 +114,7 @@ function ResponsiveAppBar() {
                       textAlign="center"
                       sx={{
                         fontWeight: 300,
-                        color: "black",
+                        color: "white",
                         fontFamily: "Merriweather",
                       }}
                     >
@@ -155,7 +155,7 @@ function ResponsiveAppBar() {
                 <Typography
                   textAlign="center"
                   sx={{ fontWeight: 300 }}
-                  color="black"
+                  color="white"
                   padding={2}
                   fontFamily="Merriweather"
                 >
