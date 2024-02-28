@@ -143,6 +143,7 @@ const releases: Release[] = [
     description:
       "Henry Alhborn has been accused of a crime he's adamant he didn't commit, and Walter Hall is determined to bring him to justice. When the stakes turn personal, it becomes clear that only one man will walk away.",
     released: false,
+    artCredits: ['Tiffany Chung', 'Gavin Shaub']
   },
   {
     name: "Doctor Sparky's Rocket Fuel",
@@ -227,6 +228,17 @@ export default function Home() {
                 Coming Soon!
               </Typography>
             )}
+            {modalRelease.artCredits && (
+              <Typography
+                fontSize={11}
+                color="#dddddd"
+                fontFamily="Merriweather"
+                marginTop={1}
+                textAlign="center"
+              >
+                Art by: {modalRelease.artCredits.join(", ")}
+              </Typography>
+            )}
             <Typography
               id="modal-modal-title"
               sx={{ color: "white", marginY: 2 }}
@@ -245,16 +257,6 @@ export default function Home() {
             >
               {modalRelease.description}
             </Typography>
-            {modalRelease.artCredits && (
-              <Typography
-                fontSize={11}
-                color="#dddddd"
-                fontFamily="Merriweather"
-                marginTop={4}
-              >
-                Art by: {modalRelease.artCredits.join(" ")}.
-              </Typography>
-            )}
             {modalRelease.embedPlayer && modalRelease.embedPlayer}
             <Typography
               fontSize={11}
