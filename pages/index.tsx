@@ -20,13 +20,15 @@ import ReleaseCard from "../components/releaseCard";
 import Carousel from "../components/carousel";
 import Iterative from "../components/iterativeText";
 
-import zachImg from "../public/headshots/IMG_5443 - Zachary Braffman.jpg";
-import reneeImg from "../public/headshots/Corriveau photo - Renee Corriveau.jpg";
-import adamImg from "../public/headshots/A26E2D8D-B52C-4CBD-848C-57930AAD9992 - Adam Durr.jpeg";
+import zachImg from "../public/headshots/zach.jpg";
+import reneeImg from "../public/headshots/renee.jpg";
+import adamImg from "../public/headshots/adam.jpg";
 import anthonyImg from "../public/headshots/Senior_Picture - Anthony Bartolomei.jpg";
-import sidImg from "../public/headshots/SG_Oneiros_Profile - Siddharth Gupta.jpg";
+import sidImg from "../public/headshots/sid.jpg";
 import breannaImg from "../public/headshots/KakaoTalk_Photo_2023-06-17-04-07-44 - Breanna Lee.jpeg";
-import siannaImg from "../public/headshots/IMG_8381 - Sianna Perez.jpg";
+import siannaImg from "../public/headshots/sianna.jpg";
+import ryanImg from "../public/headshots/ryan.png";
+import brodyImg from "../public/headshots/brody.jpg";
 
 import pbeImg from "../public/pbeCover.png";
 import pbeImg2 from "../public/pbe2.jpeg";
@@ -63,11 +65,24 @@ const people: Bio[] = [
   //     "Breanna is a first-year RTVF student and has recently become part of Fable Mason Studios, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
   // },
   {
+    name: "Brody Bundis",
+    role: "Writer, Director, Production Coordinator",
+    description:
+      "Brody is an RTVF freshman who is excited to work on projects in any medium and help students tell their stories.",
+    img: brodyImg,
+  },
+  {
     name: "Sianna Perez",
     role: "Finances",
     img: siannaImg,
     description:
       "Sianna is a first year student studying mathematics who joined Fable Mason Studios to help with project funding and financing. She is working on brainstorming ways to commodify and fund new projects. She is excited to see the growth of upcoming projects and our team!",
+  },
+  {
+    name: "Ryan Poon",
+    role: "Operations",
+    img: ryanImg,
+    description: "Ryan is a sophomore studying computer science and math who is excited to see and contribute towards all of the creative projects Fable Mason Studios is working on. He currently maintains the website and helps funding research."
   },
   {
     name: "Renee Corriveau",
@@ -314,14 +329,20 @@ export default function Home() {
           minHeight: "100vh",
           background: "#fdbb2d",
           // backgroundImage: `linear-gradient(0deg, #2f4050 0%,  100%)`,
-
         }}
       >
         <Container sx={{ color: "white" }}>
           <Typography variant="h2" fontFamily="Merriweather" textAlign="center">
             Releases
           </Typography>
-          <Box sx={{ flexGrow: 1, marginY: 5, display: 'flex', justifyContent: 'center' }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              marginY: 5,
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <Grid container spacing={6}>
               {releases.map((r, i) => {
                 return (
