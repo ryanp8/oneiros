@@ -29,6 +29,8 @@ import breannaImg from "../public/headshots/KakaoTalk_Photo_2023-06-17-04-07-44 
 import siannaImg from "../public/headshots/sianna.jpg";
 import ryanImg from "../public/headshots/ryan.png";
 import brodyImg from "../public/headshots/brody.jpg";
+import devanImg from "../public/headshots/devan.jpg";
+import emmaImg from "../public/headshots/emma.jpg";
 
 import pbeImg from "../public/pbeCover.png";
 import pbeImg2 from "../public/pbe2.jpeg";
@@ -82,7 +84,19 @@ const people: Bio[] = [
     name: "Ryan Poon",
     role: "Operations",
     img: ryanImg,
-    description: "Ryan is a sophomore studying computer science and math who is excited to see and contribute towards all of the creative projects Fable Mason Studios is working on. He currently maintains the website and helps funding research."
+    description: "Ryan is a sophomore studying computer science and math who is excited to see and contribute towards all of the creative projects Fable Mason Studios is working on. He currently maintains the website and helps with funding research."
+  },
+  {
+    name: "Emma Scally",
+    role: "Web Developer",
+    description: "Emma is a second-year student studying computer science and data science. She joined Fable Masons Studios this year and is helping with web development. She has loved the opportunity to combine her interest in technology and story-telling, and is excited to be a part of Fable Mason Studios' journey!",
+    img: emmaImg
+  },
+  {
+    name: "Devan Chanda",
+    role: "Head of Social Marketing & Branding",
+    img: devanImg,
+    description: "My name is Devan Chanda and I am a second-year from La Jolla, CA here studying Computer Engineering and Business Institutions. My primary interests and skills include programming, hardware, product management, business analytics, and marketing. I manage the social media presence and overall branding/marketing for Fable Mason Studios. I’m excited to work each week to bring everyone new content and insights into the amazing work we do here!"
   },
   {
     name: "Renee Corriveau",
