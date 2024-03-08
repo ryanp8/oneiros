@@ -13,6 +13,7 @@ import Image, { StaticImageData } from "next/image";
 // import background from "../public/background.jpeg";
 import testImg from "../public/IMG_0422.jpg";
 import Link from "next/link";
+import Head from "next/head";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
 import AboutCard from "../components/aboutCard";
@@ -199,6 +200,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Fable Mason Studios</title>
+        <link rel="shortcut icon" type="image/png" href="Fable Mason Logo Compressed.png"/>
+      </Head>
       <Navbar />
       <Modal
         open={modalOpen}
