@@ -31,6 +31,7 @@ import ryanImg from "../public/headshots/ryan.png";
 import brodyImg from "../public/headshots/brody.jpg";
 import devanImg from "../public/headshots/devan.jpg";
 import emmaImg from "../public/headshots/emma.jpg";
+import nicoImg from "../public/headshots/nico.jpg";
 
 import pbeImg from "../public/pbeCover.png";
 import pbeImg2 from "../public/pbe2.jpeg";
@@ -97,6 +98,12 @@ const people: Bio[] = [
     role: "Head of Social Marketing & Branding",
     img: devanImg,
     description: "My name is Devan Chanda and I am a second-year from La Jolla, CA here studying Computer Engineering and Business Institutions. My primary interests and skills include programming, hardware, product management, business analytics, and marketing. I manage the social media presence and overall branding/marketing for Fable Mason Studios. I’m excited to work each week to bring everyone new content and insights into the amazing work we do here!"
+  },
+  {
+    name: "Nico Antezano",
+    role: "Sound Editor/Composer",
+    description: "Nico is a second-year student studying mechanical engineering who joined Fable Mason Studios as a sound editor and composer. He is very excited to work on upcoming projects with the rest of the team!",
+    img: nicoImg
   },
   {
     name: "Renee Corriveau",
