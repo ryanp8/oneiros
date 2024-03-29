@@ -37,6 +37,7 @@ import nicoImg from "../public/headshots/nico.jpg";
 import pbeImg from "../public/pbeCover.png";
 import pbeImg2 from "../public/pbe2.jpeg";
 import drSparkyImg from "../public/DrSparkysBlack.jpeg";
+import moonlightDinerImg from "../public/moonlightDiner.jpeg";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 
 interface Bio {
@@ -171,6 +172,13 @@ const releases: Release[] = [
     ),
     artCredits: ["@NyazureDreams"],
   },
+  {
+    name: "The Moonlight Diner",
+    img: moonlightDinerImg,
+    logline: "Stories, dreams, and dark secrets all collide at The Moonlight Diner, a 1950s establishment in the middle of the Arizona desert.",
+    description: "Stories, dreams, and dark secrets all collide at The Moonlight Diner, a 1950s establishment in the middle of the Arizona desert.",
+    descriptionImgs: [moonlightDinerImg]
+  }
 ];
 
 const modalStyle = (w: number) => {
