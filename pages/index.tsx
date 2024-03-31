@@ -33,6 +33,7 @@ import brodyImg from "../public/headshots/brody.jpg";
 import devanImg from "../public/headshots/devan.jpg";
 import emmaImg from "../public/headshots/emma.jpg";
 import nicoImg from "../public/headshots/nico.jpg";
+import gavinImg from "../public/headshots/gavin.jpg";
 
 import pbeImg from "../public/pbeCover.png";
 import pbeImg2 from "../public/pbe2.jpeg";
@@ -69,6 +70,12 @@ const people: Bio[] = [
   //   description:
   //     "Breanna is a first-year RTVF student and has recently become part of Fable Mason Studios, taking charge of video editing. She's enthusiastic about our upcoming projects and looks forward to the team's shared excitement!",
   // },
+  {
+    name: "Gavin Shaub",
+    role: "Actor, Performer Liaison, Graphic Designer",
+    img: gavinImg,
+    description: "Shaub is a third-year Business Minor and Theater Major with an emphasis on Screen Acting and Costume Design. He works for the Wirtz Performance Center as a graphic designer. Shaub has acted in various short and feature-length films, educational theatre productions, and audio dramas. He works for Fable Mason Studios as an actor, graphic designer, script developer, and liaison to the Northwestern Acting community."
+  },
   {
     name: "Brody Bundis",
     role: "Writer, Director, Production Coordinator",
