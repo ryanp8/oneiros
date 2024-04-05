@@ -208,6 +208,7 @@ export default function Home() {
   const [windowWidth, setWindowWidth] = React.useState(901);
   const [modalOpen, setModalOpen] = React.useState(false);
   const [modalRelease, setModalRelease] = React.useState<Release | undefined>();
+  const [modalImgIdx, setModalImgIdx] = React.useState(0);
 
   React.useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -231,6 +232,8 @@ export default function Home() {
         {modalRelease ? (
           <Box sx={modalStyle(windowWidth)}>
             <Carousel
+              modalImgIdx={modalImgIdx}
+              setModalImgIdx={setModalImgIdx}
               steps={modalRelease.descriptionImgs.map((img, i) => {
                 return (
                   <Image
@@ -263,7 +266,7 @@ export default function Home() {
                 marginTop={1}
                 textAlign="center"
               >
-                Art by: {modalRelease.artCredits.join(", ")}
+                Art by: {modalRelease.artCredits[modalImgIdx]}
               </Typography>
             )}
             <Typography
@@ -305,7 +308,8 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
-          backgroundImage: `linear-gradient(0deg, #8c6234 0%, #2f4050 100%)`,
+          // backgroundImage: `linear-gradient(0deg, #8c6234 0%, #2f4050 100%)`,
+          backgroundColor: '#2f4050'
         }}
       >
         <Container

@@ -31,21 +31,23 @@ import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
 interface Props {
   steps: any[];
+  modalImgIdx: number;
+  setModalImgIdx: React.Dispatch<React.SetStateAction<number>>
 }
-const Carousel: React.FC<Props> = ({ steps }) => {
+const Carousel: React.FC<Props> = ({ steps, modalImgIdx, setModalImgIdx }) => {
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
+  // const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = steps.length;
 
   const handleNext = () => {
-    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % steps.length);
+    setModalImgIdx((prevActiveStep) => (prevActiveStep + 1) % steps.length);
   };
 
   const handleBack = () => {
-    if (activeStep == 0) {
-      setActiveStep(steps.length - 1);
+    if (modalImgIdx == 0) {
+      setModalImgIdx(steps.length - 1);
     } else {
-      setActiveStep((prevActiveStep) => prevActiveStep - 1);
+      setModalImgIdx((prevActiveStep) => prevActiveStep - 1);
     }
   };
 
@@ -69,7 +71,7 @@ const Carousel: React.FC<Props> = ({ steps }) => {
           </Typography>
         )}
       </Box>
-      {steps[activeStep]}
+      {steps[modalImgIdx]}
       <Box sx={{ display: "flex", alignItems: "center" }}>
         {steps.length > 1 && (
           <Typography
