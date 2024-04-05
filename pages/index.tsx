@@ -162,6 +162,14 @@ const releases: Release[] = [
     artCredits: ['Tiffany Chung', 'Gavin Shaub']
   },
   {
+    name: "The Moonlight Diner",
+    img: moonlightDinerImg,
+    logline: "Stories, dreams, and dark secrets all collide at The Moonlight Diner, a 1950s establishment in the middle of the Arizona desert.",
+    description: "Stories, dreams, and dark secrets all collide at The Moonlight Diner, a 1950s establishment in the middle of the Arizona desert.",
+    descriptionImgs: [moonlightDinerImg],
+    released: false
+  },
+  {
     name: "Doctor Sparky's Rocket Fuel",
     img: drSparkyImg,
     descriptionImgs: [drSparkyImg],
@@ -179,13 +187,6 @@ const releases: Release[] = [
     ),
     artCredits: ["@NyazureDreams"],
   },
-  {
-    name: "The Moonlight Diner",
-    img: moonlightDinerImg,
-    logline: "Stories, dreams, and dark secrets all collide at The Moonlight Diner, a 1950s establishment in the middle of the Arizona desert.",
-    description: "Stories, dreams, and dark secrets all collide at The Moonlight Diner, a 1950s establishment in the middle of the Arizona desert.",
-    descriptionImgs: [moonlightDinerImg]
-  }
 ];
 
 const modalStyle = (w: number) => {
