@@ -363,7 +363,7 @@ export default function Home() {
           <Container
             sx={{ display: "flex", justifyContent: "center", marginTop: 3 }}
           >
-            <Link href="https://www.instagram.com/the.oneiros.project/">
+            <Link href="https://www.instagram.com/fablemasonstudios/">
               <InstagramIcon fontSize="large" style={{color: 'white'}}></InstagramIcon>
             </Link>
           </Container>
