@@ -367,6 +367,7 @@ export default function Home() {
               <InstagramIcon fontSize="large" style={{color: 'white'}}></InstagramIcon>
             </Link>
           </Container>
+          <Typography color="white" fontFamily="Merriweather" sx={{textAlign: "center"}}>Contact us at: <Link style={{textDecoration: "underline"}} href="mailto:fablemasonstudios@gmail.com">fablemasonstudios@gmail.com</Link></Typography>
         </Container>
       </Box>
       <Box
