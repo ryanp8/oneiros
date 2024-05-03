@@ -40,6 +40,7 @@ export default function work() {
           {items.map((item, i) => {
             return (
               <Box
+                key={i}
                 sx={{
                   paddingY: 6,
                   display: "flex",
@@ -53,7 +54,6 @@ export default function work() {
                 }}
               >
                 <Image
-                  key={i}
                   src={item.image}
                   alt={item.title}
                   style={{ borderRadius: 20 }}
