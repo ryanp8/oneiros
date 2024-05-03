@@ -114,7 +114,7 @@ function ResponsiveAppBar() {
                       textAlign="center"
                       sx={{
                         fontWeight: 300,
-                        color: "white",
+                        color: "black",
                         fontFamily: "Merriweather",
                       }}
                     >
