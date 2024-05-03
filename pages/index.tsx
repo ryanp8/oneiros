@@ -167,7 +167,8 @@ const releases: Release[] = [
     logline: "Stories, dreams, and dark secrets all collide at The Moonlight Diner, a 1950s establishment in the middle of the Arizona desert.",
     description: "Stories, dreams, and dark secrets all collide at The Moonlight Diner, a 1950s establishment in the middle of the Arizona desert.",
     descriptionImgs: [moonlightDinerImg],
-    released: false
+    released: false,
+    artCredits: ['Gavin Shaub']
   },
   {
     name: "Doctor Sparky's Rocket Fuel",
