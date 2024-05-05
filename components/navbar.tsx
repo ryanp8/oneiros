@@ -18,8 +18,8 @@ import Image from "next/image";
 import logo from "../public/Fable Mason Logo Compressed.png";
 import Link from "next/link";
 
-const pages = ["Home", "Releases", "About Us", "Other Work"];
-const redirects = ["/", "/#releases", "/#about", "/work"];
+const pages = ["Home", "Featured", "About Us", "All Releases"];
+const redirects = ["/", "/#featured", "/#about", "/releases"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(

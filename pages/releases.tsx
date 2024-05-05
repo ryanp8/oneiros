@@ -5,29 +5,25 @@ import * as React from "react";
 
 import Navbar from "../components/navbar";
 
-import justiceArchImg from "../public/justicearch.png";
-import skuyImg from "../public/skuy.webp";
-
-const items = [
-  {
-    title: "Justice Arch",
-    url: "https://www.linkedin.com/feed/update/urn:li:activity:7166489053930962944/",
-    image: justiceArchImg,
-  },
-  {
-    title: "Skuy",
-    url: "https://www.instagram.com/skuy.app/",
-    image: skuyImg,
-  },
-];
+import { releases } from "@/data/releases";
 
 export default function work() {
+  const [windowWidth, setWindowWidth] = React.useState(0);
+  React.useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  });
+
   return (
     <>
       <Navbar />
       <Container sx={{ marginTop: 10 }}>
-        <Typography variant="h2" fontFamily="Merriweather" textAlign="center" marginBottom={4}>
-          Our Other Works
+        <Typography
+          variant="h2"
+          fontFamily="Merriweather"
+          textAlign="center"
+          marginBottom={4}
+        >
+          Our Work
         </Typography>
         <Container
           sx={{
@@ -37,7 +33,7 @@ export default function work() {
             alignItems: "center",
           }}
         >
-          {items.map((item, i) => {
+          {releases.map((item, i) => {
             return (
               <Box
                 key={i}
@@ -54,11 +50,11 @@ export default function work() {
                 }}
               >
                 <Image
-                  src={item.image}
-                  alt={item.title}
+                  src={item.img}
+                  alt={item.name}
                   style={{ borderRadius: 20 }}
-                  // width={windowWidth > 900 ? 400 : windowWidth * 0.6}
-                  // height={windowWidth > 900 ? 400 : windowWidth * 0.6}
+                  width={windowWidth > 900 ? 250 : windowWidth * 0.6}
+                  height={windowWidth > 900 ? 250 : windowWidth * 0.6}
                 ></Image>
                 <Box>
                   <Typography
@@ -67,13 +63,15 @@ export default function work() {
                     textAlign="center"
                     sx={{ marginY: 2 }}
                   >
-                    {item.title}
+                    {item.name}
                   </Typography>
-                  <Link href={item.url} target="_blank">
-                    <Typography textAlign="center">
-                      Click here to view
-                    </Typography>
-                  </Link>
+                  {item.url && (
+                    <Link href={item.url} target="_blank">
+                      <Typography textAlign="center">
+                        Click here to view
+                      </Typography>
+                    </Link>
+                  )}
                 </Box>
               </Box>
             );
