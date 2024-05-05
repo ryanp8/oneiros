@@ -1,19 +1,19 @@
 import { StaticImageData } from "next/image";
 
-import zachImg from "../public/headshots/zach.jpg";
-import reneeImg from "../public/headshots/renee.jpg";
-import adamImg from "../public/headshots/adam.jpg";
-import anthonyImg from "../public/headshots/anthony.jpg";
-import sidImg from "../public/headshots/sid.jpg";
-import breannaImg from "../public/headshots/KakaoTalk_Photo_2023-06-17-04-07-44 - Breanna Lee.jpeg";
-import siannaImg from "../public/headshots/sianna.jpg";
-import ryanImg from "../public/headshots/ryan.png";
-import brodyImg from "../public/headshots/brody.jpg";
-import devanImg from "../public/headshots/devan.jpg";
-import emmaImg from "../public/headshots/emma.jpg";
-import nicoImg from "../public/headshots/nico.jpg";
-import gavinImg from "../public/headshots/gavin.jpg";
-import bazImg from "../public/headshots/baz.jpeg";
+import zachImg from "@/public/headshots/zach.jpg";
+import reneeImg from "@/public/headshots/renee.jpg";
+import adamImg from "@/public/headshots/adam.jpg";
+import anthonyImg from "@/public/headshots/anthony.jpg";
+import sidImg from "@/public/headshots/sid.jpg";
+import breannaImg from "@/public/headshots/KakaoTalk_Photo_2023-06-17-04-07-44 - Breanna Lee.jpeg";
+import siannaImg from "@/public/headshots/sianna.jpg";
+import ryanImg from "@/public/headshots/ryan.png";
+import brodyImg from "@/public/headshots/brody.jpg";
+import devanImg from "@/public/headshots/devan.jpg";
+import emmaImg from "@/public/headshots/emma.jpg";
+import nicoImg from "@/public/headshots/nico.jpg";
+import gavinImg from "@/public/headshots/gavin.jpg";
+import bazImg from "@/public/headshots/baz.jpeg";
 
 
 export interface Bio {
