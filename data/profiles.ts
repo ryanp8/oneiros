@@ -13,6 +13,7 @@ import devanImg from "../public/headshots/devan.jpg";
 import emmaImg from "../public/headshots/emma.jpg";
 import nicoImg from "../public/headshots/nico.jpg";
 import gavinImg from "../public/headshots/gavin.jpg";
+import bazImg from "../public/headshots/baz.jpeg";
 
 
 export interface Bio {
@@ -57,6 +58,12 @@ export const people: Bio[] = [
     description:
       "Brody is an RTVF freshman who is excited to work on projects in any medium and help students tell their stories.",
     img: brodyImg,
+  },
+  {
+    name: "Baz Holifield",
+    role: "Voice Actor",
+    description: "Baz is a third year Linguistics and Theatre student from Milwaukee, Wisconsin. He loves doing weird voices, and is excited to collaborate on all these amazing projects!",
+    img: bazImg
   },
   {
     name: "Sianna Perez",
