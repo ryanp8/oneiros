@@ -19,8 +19,8 @@ import ReleaseCard from "../components/releaseCard";
 import Carousel from "../components/carousel";
 import Iterative from "../components/iterativeText";
 
-import { Release, featured } from "@/data/releases";
-import { people } from "@/data/profiles";
+import { Release, featured } from "@/data/releasesData";
+import { people } from "@/data/profilesData";
 
 
 const modalStyle = (w: number) => {

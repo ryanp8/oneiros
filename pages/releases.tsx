@@ -5,13 +5,13 @@ import * as React from "react";
 
 import Navbar from "../components/navbar";
 
-import { releases } from "@/data/releases";
+import { releases } from "@/data/releasesData";
 
-export default function work() {
+export default function Releases() {
   const [windowWidth, setWindowWidth] = React.useState(0);
   React.useEffect(() => {
     setWindowWidth(window.innerWidth);
-  });
+  }, []);
 
   return (
     <>
