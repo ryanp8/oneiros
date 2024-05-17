@@ -14,6 +14,7 @@ import emmaImg from "@/public/headshots/emma.jpg";
 import nicoImg from "@/public/headshots/nico.jpg";
 import gavinImg from "@/public/headshots/gavin.jpg";
 import bazImg from "@/public/headshots/baz.jpeg";
+import henryImg from "@/public/headshots/henry.jpeg";
 
 
 export interface Bio {
@@ -106,6 +107,12 @@ export const people: Bio[] = [
     img: anthonyImg,
     description:
       "Anthony is a third-year engineering student who's joined Fable Mason Studios this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
+  },
+  {
+    name: "Henry Liu",
+    role: "Business Operation",
+    img: henryImg,
+    description: "Henry is a Co’27 Econ and Math double major. He works on cost management and business operation at Fable Mason Studios. He is excited to apply what he learns in class to real world issues, and become part of a rapidly-growing student business."
   },
   {
     name: "Renee Corriveau",
