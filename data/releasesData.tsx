@@ -3,7 +3,7 @@ import pbeImg2 from "../public/pbe2.jpeg";
 import drSparkyImg from "../public/DrSparkysBlack.jpeg";
 import moonlightDinerImg from "../public/moonlightDiner.jpeg";
 import justiceArchImg from "../public/justicearch.png";
-import skuyImg from "../public/skuy.webp";
+import skuyImg from "../public/skuy.png";
 import Image, { StaticImageData } from "next/image";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 
@@ -11,7 +11,7 @@ export interface Release {
   name: string;
   img: StaticImageData;
   logline?: String;
-  description: string;
+  description?: string;
   url?: string;
   embedPlayer?: ReactJSXElement;
   released?: boolean;
@@ -67,14 +67,14 @@ export const releases: Release[] = [
   {
     name: "Justice Arch Advertisement",
     img: justiceArchImg,
-    description: "asjdflj",
+    description: "",
     featured: false,
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7166489053930962944/"
   },
   {
     name: "Skuy Advertisement",
     img: skuyImg,
-    description: "asjdflj",
+    description: "",
     featured: false,
     url: "https://www.instagram.com/reel/C4_J0qXu5hi/?igsh=NTc4MTIwNjQ2YQ=="
   },

@@ -4,18 +4,23 @@ import Image from "next/image";
 import * as React from "react";
 
 import Navbar from "../components/navbar";
+import Modal from "../components/modal";
 
-import { releases } from "@/data/releasesData";
+import { Release, releases } from "@/data/releasesData";
 
 export default function Releases() {
   const [windowWidth, setWindowWidth] = React.useState(0);
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [modalRelease, setModalRelease] = React.useState<Release | null>(null);
   React.useEffect(() => {
+    window.scrollTo(0,0)
     setWindowWidth(window.innerWidth);
   }, []);
 
   return (
     <>
       <Navbar />
+      <Modal modalOpen={modalOpen} setModalOpen={setModalOpen} modalRelease={modalRelease} windowWidth={windowWidth} />
       <Container sx={{ marginTop: 10 }}>
         <Typography
           variant="h2"
@@ -47,6 +52,13 @@ export default function Releases() {
                   borderTop: 1,
                   borderColor: "#555555",
                   width: "80%",
+                  cursor: item.description && "pointer"
+                }}
+                onClick={() => {
+                  if (item.description) {
+                    setModalRelease(item);
+                    setModalOpen(true);
+                  }
                 }}
               >
                 <Image
