@@ -48,7 +48,8 @@ export default function Home() {
           flexDirection: "column",
           justifyContent: "space-around",
           // backgroundImage: `linear-gradient(0deg, #8c6234 0%, #2f4050 100%)`,
-          backgroundColor: '#2f4050'
+          // backgroundColor: '#2f4050'
+          backgroundColor: '#000000'
         }}
       >
         <Container

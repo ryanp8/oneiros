@@ -114,6 +114,9 @@ export default function ReleaseModal({
             {modalRelease.description}
           </Typography>
           {modalRelease.embedPlayer && modalRelease.embedPlayer}
+          {modalRelease.credits && modalRelease.credits.map((name, i) => {
+            return <Typography key={i}>{name}</Typography>
+          })}
           <Typography
             fontSize={11}
             color="#dddddd"

@@ -38,7 +38,7 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="sticky"
-      sx={{ margin: 0, padding: 0, background: "#2f4050", width: "100vw" }}
+      sx={{ margin: 0, padding: 1, background: "#000000", width: "100vw" }}
     >
       <Container maxWidth="xl">
         <Toolbar
@@ -52,7 +52,7 @@ function ResponsiveAppBar() {
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
             <Link href="/">
-              <Image src={logo} alt="logo" width={50} height={50}></Image>
+              <Image src={logo} alt="logo" width={70} height={70}></Image>
             </Link>
           </Box>
           {/* <Typography

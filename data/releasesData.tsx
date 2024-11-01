@@ -12,6 +12,7 @@ export interface Release {
   img: StaticImageData;
   logline?: String;
   description?: string;
+  credits?: string[];
   url?: string;
   embedPlayer?: ReactJSXElement;
   released?: boolean;
@@ -21,18 +22,6 @@ export interface Release {
 }
 
 export const releases: Release[] = [
-  {
-    name: "Pursuit of the Bitter End",
-    img: pbeImg2,
-    descriptionImgs: [pbeImg2, pbeImg],
-    logline:
-      "Back in the Old West, two men are fated to hunt each other, both seeing themselves as the hero.",
-    description:
-      "Henry Alhborn has been accused of a crime he's adamant he didn't commit, and Walter Hall is determined to bring him to justice. When the stakes turn personal, it becomes clear that only one man will walk away.",
-    released: false,
-    artCredits: ["Tiffany Chung", "Gavin Shaub"],
-    featured: true,
-  },
   {
     name: "The Moonlight Diner",
     img: moonlightDinerImg,
@@ -44,6 +33,22 @@ export const releases: Release[] = [
     released: false,
     artCredits: ["Gavin Shaub"],
     featured: true,
+  },
+  {
+    name: "Pursuit of the Bitter End",
+    img: pbeImg2,
+    descriptionImgs: [pbeImg2, pbeImg],
+    logline:
+      "Back in the Old West, two men are fated to hunt each other, both seeing themselves as the hero.",
+    description:
+      "Henry Alhborn has been accused of a crime he's adamant he didn't commit, and Walter Hall is determined to bring him to justice. When the stakes turn personal, it becomes clear that only one man will walk away.",
+    released: true,
+    artCredits: ["Tiffany Chung", "Gavin Shaub"],
+    featured: true,
+    embedPlayer: (
+      <iframe src="https://podcasters.spotify.com/pod/show/pursuitofthebitterend/embed" frameBorder="0" scrolling="no"></iframe>
+    ),
+    //credits: ["Drew Alvarez", "Zachary Braffman", "Adam Durr", "Baz Holifield", "Alex Morgan", "Gavin Shaub"]
   },
   {
     name: "Doctor Sparky's Rocket Fuel",
