@@ -103,10 +103,10 @@ export default function Home() {
           <Container
             sx={{ display: "flex", justifyContent: "center", marginTop: 1}}
           >
-            <Link href="https://www.instagram.com/fablemasonstudios/">
+            <Link href="https://www.instagram.com/fablemasonstudios/" target="_blank">
               <InstagramIcon fontSize="large" style={{color: 'white', margin: 3}}></InstagramIcon>
             </Link>
-            <Link href="https://www.linkedin.com/company/fable-mason-studios/posts/?feedView=all">
+            <Link href="https://www.linkedin.com/company/fable-mason-studios/posts/?feedView=all" target="_blank">
               <Linkedin fontSize="large" style={{color: "white", margin: 3}}></Linkedin>
             </Link>
           </Container>

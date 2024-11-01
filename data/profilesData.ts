@@ -63,7 +63,7 @@ export const people: Bio[] = [
   {
     name: "Baz Holifield",
     role: "Voice Actor",
-    description: "Baz is a fourth year Linguistics and Theatre student from Milwaukee, Wisconsin. He loves doing weird voices, and is excited to collaborate on all these amazing projects!",
+    description: "Baz is a fourth-year Linguistics and Theatre student from Milwaukee, Wisconsin. He loves doing weird voices, and is excited to collaborate on all these amazing projects!",
     img: bazImg
   },
   {
@@ -71,7 +71,7 @@ export const people: Bio[] = [
     role: "Finances",
     img: siannaImg,
     description:
-      "Sianna is a second year student studying mathematics who joined Fable Mason Studios to help with project funding and financing. She is working on brainstorming ways to commodify and fund new projects. She is excited to see the growth of upcoming projects and our team!",
+      "Sianna is a second-year student studying mathematics who joined Fable Mason Studios to help with project funding and financing. She is working on brainstorming ways to commodify and fund new projects. She is excited to see the growth of upcoming projects and our team!",
   },
   {
     name: "Ryan Poon",
