@@ -28,16 +28,16 @@ export const people: Bio[] = [
   {
     name: "Zachary Braffman",
     img: zachImg,
-    role: "Founder, Writer, Director, Actor, Producer",
+    role: "Founder",
     description:
-      "Zachary is second-year film and computer science student who founded Fable Mason Studios. He's working in a little bit of each facet of the group, and is looking forward to telling interesting and fun stories!",
+      "Zachary is a third-year film and computer science student who founded Fable Mason Studios. He's working in a little bit of each facet of the group, and is looking forward to telling interesting and fun stories!",
   },
   {
     name: "Adam Durr",
     img: adamImg,
     role: "Writer",
     description:
-      "Adam is a second-year student studying political science. He has creative writing experience from programs at Interlochen Arts Academy, and joined Fable Mason Studios as a writer in the fall of 2022. He is currently working on several projects, and is very excited to see where they go!",
+      "Adam is a third-year student studying political science. He has creative writing experience from programs at Interlochen Arts Academy, and joined Fable Mason Studios as a writer in the fall of 2022. He is currently working on several projects, and is very excited to see where they go!",
   },
   // {
   //   name: "Breanna Lee",
@@ -51,19 +51,19 @@ export const people: Bio[] = [
     role: "Actor, Performer Liaison, Graphic Designer",
     img: gavinImg,
     description:
-      "Shaub is a third-year Business Minor and Theater Major with an emphasis on Screen Acting and Costume Design. He works for the Wirtz Performance Center as a graphic designer. Shaub has acted in various short and feature-length films, educational theatre productions, and audio dramas. He works for Fable Mason Studios as an actor, graphic designer, script developer, and liaison to the Northwestern Acting community.",
+      "Shaub is a fourth-year Business Minor and Theater Major with an emphasis on Screen Acting and Costume Design. He works for the Wirtz Performance Center as a graphic designer. Shaub has acted in various short and feature-length films, educational theatre productions, and audio dramas. He works for Fable Mason Studios as an actor, graphic designer, script developer, and liaison to the Northwestern Acting community.",
   },
   {
     name: "Brody Bundis",
     role: "Writer, Director, Production Coordinator",
     description:
-      "Brody is an RTVF freshman who is excited to work on projects in any medium and help students tell their stories.",
+      "Brody is an RTVF sophomore who is excited to work on projects in any medium and help students tell their stories.",
     img: brodyImg,
   },
   {
     name: "Baz Holifield",
     role: "Voice Actor",
-    description: "Baz is a third year Linguistics and Theatre student from Milwaukee, Wisconsin. He loves doing weird voices, and is excited to collaborate on all these amazing projects!",
+    description: "Baz is a fourth year Linguistics and Theatre student from Milwaukee, Wisconsin. He loves doing weird voices, and is excited to collaborate on all these amazing projects!",
     img: bazImg
   },
   {
@@ -71,20 +71,20 @@ export const people: Bio[] = [
     role: "Finances",
     img: siannaImg,
     description:
-      "Sianna is a first year student studying mathematics who joined Fable Mason Studios to help with project funding and financing. She is working on brainstorming ways to commodify and fund new projects. She is excited to see the growth of upcoming projects and our team!",
+      "Sianna is a second year student studying mathematics who joined Fable Mason Studios to help with project funding and financing. She is working on brainstorming ways to commodify and fund new projects. She is excited to see the growth of upcoming projects and our team!",
   },
   {
     name: "Ryan Poon",
     role: "Operations",
     img: ryanImg,
     description:
-      "Ryan is a sophomore studying computer science and math who is excited to see and contribute towards all of the creative projects Fable Mason Studios is working on. He currently maintains the website and helps with funding research.",
+      "Ryan is a junior studying computer science and math who is excited to see and contribute towards all of the creative projects Fable Mason Studios is working on. He currently maintains the website and helps with funding research.",
   },
   {
     name: "Emma Scally",
     role: "Web Developer",
     description:
-      "Emma is a second-year student studying computer science and data science. She joined Fable Masons Studios this year and is helping with web development. She has loved the opportunity to combine her interest in technology and story-telling, and is excited to be a part of Fable Mason Studios' journey!",
+      "Emma is a third-year student studying computer science and data science. She joined Fable Masons Studios this year and is helping with web development. She has loved the opportunity to combine her interest in technology and story-telling, and is excited to be a part of Fable Mason Studios' journey!",
     img: emmaImg,
   },
   {
@@ -92,13 +92,13 @@ export const people: Bio[] = [
     role: "Head of Social Marketing & Branding",
     img: devanImg,
     description:
-      "My name is Devan Chanda and I am a second-year from La Jolla, CA here studying Computer Engineering and Business Institutions. My primary interests and skills include programming, hardware, product management, business analytics, and marketing. I manage the social media presence and overall branding/marketing for Fable Mason Studios. I’m excited to work each week to bring everyone new content and insights into the amazing work we do here!",
+      "My name is Devan Chanda and I am a third-year from La Jolla, CA here studying Computer Engineering and Business Institutions. My primary interests and skills include programming, hardware, product management, business analytics, and marketing. I manage the social media presence and overall branding/marketing for Fable Mason Studios. I’m excited to work each week to bring everyone new content and insights into the amazing work we do here!",
   },
   {
     name: "Nico Antezano",
     role: "Sound Editor/Composer",
     description:
-      "Nico is a second-year student studying mechanical engineering who joined Fable Mason Studios as a sound editor and composer. He is very excited to work on upcoming projects with the rest of the team!",
+      "Nico is a third-year student studying mechanical engineering who joined Fable Mason Studios as a sound editor and composer. He is very excited to work on upcoming projects with the rest of the team!",
     img: nicoImg,
   },
   {
@@ -106,7 +106,7 @@ export const people: Bio[] = [
     role: "Editor",
     img: anthonyImg,
     description:
-      "Anthony is a third-year engineering student who's joined Fable Mason Studios this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
+      "Anthony is a fourth-year engineering student who's joined Fable Mason Studios this year. He is overseeing and is working in the audio editing pipeline. He is excited about our upcoming projects and hopes everyone else is too!",
   },
   {
     name: "Henry Liu",

@@ -12,6 +12,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Linkedin from "@mui/icons-material/LinkedIn";
 import AboutCard from "../components/aboutCard";
 import ReleaseCard from "../components/releaseCard";
 import Iterative from "../components/iterativeText";
@@ -100,10 +101,13 @@ export default function Home() {
             </Link>
           </Container>
           <Container
-            sx={{ display: "flex", justifyContent: "center", marginTop: 3 }}
+            sx={{ display: "flex", justifyContent: "center", marginTop: 1}}
           >
             <Link href="https://www.instagram.com/fablemasonstudios/">
-              <InstagramIcon fontSize="large" style={{color: 'white'}}></InstagramIcon>
+              <InstagramIcon fontSize="large" style={{color: 'white', margin: 3}}></InstagramIcon>
+            </Link>
+            <Link href="https://www.linkedin.com/company/fable-mason-studios/posts/?feedView=all">
+              <Linkedin fontSize="large" style={{color: "white", margin: 3}}></Linkedin>
             </Link>
           </Container>
           <Typography color="white" fontFamily="Merriweather" sx={{textAlign: "center"}}>Contact us at: <Link style={{textDecoration: "underline"}} href="mailto:fablemasonstudios@gmail.com">fablemasonstudios@gmail.com</Link></Typography>
