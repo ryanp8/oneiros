@@ -3,8 +3,6 @@ import {
   Container,
   Typography,
   Box,
-  useMediaQuery,
-  Button,
   Grid,
 } from "@mui/material";
 import Navbar from "../components/navbar";
@@ -13,13 +11,11 @@ import Head from "next/head";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Linkedin from "@mui/icons-material/LinkedIn";
-import AboutCard from "../components/aboutCard";
 import ReleaseCard from "../components/releaseCard";
 import Iterative from "../components/iterativeText";
 import Modal from "../components/modal";
 
 import { Release, featured } from "@/data/releasesData";
-import { people } from "@/data/profilesData";
 
 
 
@@ -177,57 +173,6 @@ export default function Home() {
                       {r.logline}
                     </Typography>
                   </ReleaseCard>
-                );
-              })}
-            </Grid>
-          </Box>
-        </Container>
-      </Box>
-      <Box
-        id="about"
-        sx={{
-          margin: 0,
-          padding: "5%",
-          minHeight: "100vh",
-          // background: "#048fd4",
-          background: `linear-gradient(0deg, rgba(1,39,75,1) 0%, rgba(47,64,80,1) 100%);`,
-        }}
-      >
-        <Container sx={{ color: "white" }}>
-          <Typography variant="h2" fontFamily="Merriweather" textAlign="center">
-            About Us
-          </Typography>
-          <Box sx={{ flexGrow: 1, marginY: 5 }}>
-            <Grid container spacing={6}>
-              {people.map((p, i) => {
-                return (
-                  <AboutCard xs={12} sm={6} md={4} img={p.img} key={i}>
-                    <Typography
-                      fontWeight={100}
-                      textAlign="center"
-                      fontFamily="Merriweather"
-                      fontSize={18}
-                    >
-                      {p.name}
-                    </Typography>
-                    <Typography
-                      fontWeight={800}
-                      fontFamily="Merriweather"
-                      fontSize={14}
-                      textAlign="center"
-                      sx={{ marginY: "1em" }}
-                    >
-                      {p.role}
-                    </Typography>
-                    <Typography
-                      fontWeight={100}
-                      fontFamily="Merriweather"
-                      fontSize={14}
-                      textAlign="center"
-                    >
-                      {p.description}
-                    </Typography>
-                  </AboutCard>
                 );
               })}
             </Grid>
