@@ -45,9 +45,9 @@ export const releases: Release[] = [
     released: true,
     artCredits: ["Tiffany Chung", "Gavin Shaub"],
     featured: true,
-    embedPlayer: (
-      <iframe src="https://podcasters.spotify.com/pod/show/pursuitofthebitterend/embed" frameBorder="0" scrolling="no"></iframe>
-    ),
+    // embedPlayer: (
+    //   <iframe src="https://podcasters.spotify.com/pod/show/pursuitofthebitterend/embed" frameBorder="0" scrolling="no"></iframe>
+    // ),
     //credits: ["Drew Alvarez", "Zachary Braffman", "Adam Durr", "Baz Holifield", "Alex Morgan", "Gavin Shaub"]
   },
   {

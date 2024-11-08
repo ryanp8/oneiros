@@ -13,7 +13,7 @@ import { people } from "@/data/profilesData";
 
 import AboutCard from "../components/aboutCard";
 
-export default function About() {
+export default function Team() {
   return (
     <>
       <Navbar />
@@ -29,7 +29,7 @@ export default function About() {
       >
         <Container sx={{ color: "white" }}>
           <Typography variant="h2" fontFamily="Merriweather" textAlign="center">
-            About Us
+            Our Team
           </Typography>
           <Box sx={{ flexGrow: 1, marginY: 5 }}>
             <Grid container spacing={6}>
@@ -87,23 +87,6 @@ export default function About() {
                         fontSize={18}
                       >
                         {p.name}
-                      </Typography>
-                      <Typography
-                        fontWeight={800}
-                        fontFamily="Merriweather"
-                        fontSize={14}
-                        textAlign="center"
-                        sx={{ marginY: "1em" }}
-                      >
-                        {p.role}
-                      </Typography>
-                      <Typography
-                        fontWeight={100}
-                        fontFamily="Merriweather"
-                        fontSize={14}
-                        textAlign="center"
-                      >
-                        {p.description}
                       </Typography>
                     </AboutCard>
                   );
