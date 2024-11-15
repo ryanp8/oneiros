@@ -87,7 +87,7 @@ export default function Releases() {
             >
               this
             </Link>
-            {" "} form if you're interested in our advertising grant!
+            {" "} form if you&apos;re interested in our advertising grant!
           </Typography>
         </Container>
       </Container>
