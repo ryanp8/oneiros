@@ -8,6 +8,7 @@ import {
   Modal,
   Grid,
 } from "@mui/material";
+import Link from "next/link";
 
 import Image from "next/image";
 import Carousel from "./carousel";
@@ -114,6 +115,13 @@ export default function ReleaseModal({
             {modalRelease.description}
           </Typography>
           {modalRelease.embedPlayer && modalRelease.embedPlayer}
+          {modalRelease.url && (
+            <Link href={modalRelease.url}>
+              <Typography fontSize={24} fontFamily="Merriweather" color="white">
+                  Click here to listen!
+                </Typography>
+            </Link>)
+          }
           {modalRelease.credits && modalRelease.credits.map((name, i) => {
             return <Typography key={i}>{name}</Typography>
           })}

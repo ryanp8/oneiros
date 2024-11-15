@@ -49,6 +49,7 @@ export const releases: Release[] = [
     //   <iframe src="https://podcasters.spotify.com/pod/show/pursuitofthebitterend/embed" frameBorder="0" scrolling="no"></iframe>
     // ),
     //credits: ["Drew Alvarez", "Zachary Braffman", "Adam Durr", "Baz Holifield", "Alex Morgan", "Gavin Shaub"]
+    url: 'https://creators.spotify.com/pod/show/pursuitofthebitterend'
   },
   {
     name: "Doctor Sparky's Rocket Fuel",
