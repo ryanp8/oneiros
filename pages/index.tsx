@@ -106,7 +106,6 @@ export default function Home() {
               <Linkedin fontSize="large" style={{color: "white", margin: 3}}></Linkedin>
             </Link>
           </Container>
-          <Typography color="white" fontFamily="Merriweather" sx={{textAlign: "center"}}>Contact us at: <Link style={{textDecoration: "underline"}} href="mailto:fablemasonstudios@gmail.com">fablemasonstudios@gmail.com</Link></Typography>
         </Container>
       </Box>
       <Box
