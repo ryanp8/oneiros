@@ -19,7 +19,7 @@ import logo from "../public/Fable Mason Logo Compressed.png";
 import Link from "next/link";
 
 const pages = ["Home", "Featured", "Our Team", "All Releases", "Inquiries"];
-const redirects = ["/", "/#featured", "/team", "/releases", "/inquiries"];
+const redirects = ["/", "/#featured", "/team/#", "/releases/#", "/inquiries/#"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -109,7 +109,7 @@ function ResponsiveAppBar() {
                   //   router.push(`/${redirects[i]}`);
                   // }}
                 >
-                  <Link key={i} href={redirects[i]} scroll={redirects[i] == '/'}>
+                  <Link key={i} href={redirects[i]}>
                     <Typography
                       textAlign="center"
                       sx={{
@@ -148,10 +148,10 @@ function ResponsiveAppBar() {
           >
             Oneiros
           </Typography> */}
-          
+
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {pages.map((page, i) => (
-              <Link key={i} href={redirects[i]} scroll={redirects[i] == '/'}>
+              <Link key={i} href={redirects[i]} scroll={redirects[i] != '/#featured'}>
                 <Typography
                   textAlign="center"
                   sx={{ fontWeight: 300 }}
