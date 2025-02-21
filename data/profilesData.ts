@@ -56,7 +56,7 @@ export const people: Bio[] = [
   },
   {
     name: "Brody Bundis",
-    role: "Writer, Director, Production Coordinator",
+    role: "Production Coordinator, Head of Advertising ",
     description:
       "Brody is an RTVF sophomore who is excited to work on projects in any medium and help students tell their stories.",
     img: brodyImg,
