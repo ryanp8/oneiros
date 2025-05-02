@@ -18,7 +18,7 @@ import Image from "next/image";
 import logo from "../public/Fable Mason Logo Compressed.png";
 import Link from "next/link";
 
-const pages = ["Home", "Our Team", "All Releases", "Inquiries"];
+const pages = ["Home", "Our Team", "Releases", "Inquiries"];
 const redirects = ["/", "/team/#", "/releases/#", "/inquiries/#"];
 
 function ResponsiveAppBar() {

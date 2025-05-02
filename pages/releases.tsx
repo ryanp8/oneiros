@@ -8,25 +8,84 @@ import Modal from "../components/modal";
 
 import { Release, releases } from "@/data/releasesData";
 
+function LeftCard({ item }) {
+  return (
+    <Container
+      sx={{ display: "flex", justifyContent: "space-apart", marginY: 1 }}
+    >
+      <Box sx={{ width: "100%", marginRight: 2 }}>
+        <h1 style={{ color: "#ffffff", fontFamily: "Cardo" }}>{item.name}</h1>
+        <Typography sx={{ fontFamily: "Cardo", color: "#ffffff" }}>
+          {item.description}
+        </Typography>
+      </Box>
+      <Image
+        src={item.img}
+        alt="headshot"
+        width={250}
+        height={250}
+        style={{ borderRadius: "10%", margin: 2 }}
+      ></Image>
+    </Container>
+  );
+}
+
+function RightCard({ item }) {
+  return (
+    <Container
+      sx={{
+        display: "flex",
+        justifyContent: "space-apart",
+        marginY: 1,
+        flexDirection: "row-reverse",
+      }}
+    >
+      <Box sx={{ width: "100%", marginLeft: 2 }}>
+        <h1 style={{ color: "#ffffff", fontFamily: "Cardo" }}>{item.name}</h1>
+        <Typography sx={{ fontFamily: "Cardo", color: "#ffffff" }}>
+          {item.description}
+        </Typography>
+      </Box>
+      <Image
+        src={item.img}
+        alt="headshot"
+        width={250}
+        height={250}
+        style={{ borderRadius: "10%", margin: 2 }}
+      ></Image>
+    </Container>
+  );
+}
+
 export default function Releases() {
   const [windowWidth, setWindowWidth] = React.useState(0);
   const [modalOpen, setModalOpen] = React.useState(false);
   const [modalRelease, setModalRelease] = React.useState<Release | null>(null);
   React.useEffect(() => {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0);
     setWindowWidth(window.innerWidth);
   }, []);
 
   return (
     <>
       <Navbar />
-      <Modal modalOpen={modalOpen} setModalOpen={setModalOpen} modalRelease={modalRelease} windowWidth={windowWidth} />
-      <Container sx={{ marginTop: 10 }}>
+      <Modal
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+        modalRelease={modalRelease}
+        windowWidth={windowWidth}
+      />
+      <Box
+        sx={{
+          background: `linear-gradient(0deg, rgba(1,39,75,1) 0%, rgba(47,64,80,1) 100%);`,
+        }}
+      >
         <Typography
           variant="h2"
-          fontFamily="Merriweather"
+          fontFamily="Cinzel Decorative"
           textAlign="center"
           marginBottom={4}
+          color="#ffffff"
         >
           Our Work
         </Typography>
@@ -39,57 +98,13 @@ export default function Releases() {
           }}
         >
           {releases.map((item, i) => {
-            return (
-              <Box
-                key={i}
-                sx={{
-                  paddingY: 6,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  // borderBottomWidth: 1,
-                  // borderBottomColor: '#888888'
-                  borderTop: 1,
-                  borderColor: "#555555",
-                  width: "80%",
-                  cursor: item.description && "pointer"
-                }}
-                onClick={() => {
-                  if (item.description) {
-                    setModalRelease(item);
-                    setModalOpen(true);
-                  }
-                }}
-              >
-                <Image
-                  src={item.img}
-                  alt={item.name}
-                  style={{ borderRadius: 20 }}
-                  width={windowWidth > 900 ? 250 : windowWidth * 0.6}
-                  height={windowWidth > 900 ? 250 : windowWidth * 0.6}
-                ></Image>
-                <Box>
-                  <Typography
-                    variant="h4"
-                    fontFamily="Merriweather"
-                    textAlign="center"
-                    sx={{ marginY: 2 }}
-                  >
-                    {item.name}
-                  </Typography>
-                  {item.url && (
-                    <Link href={item.url} target="_blank">
-                      <Typography textAlign="center">
-                        Click here to view
-                      </Typography>
-                    </Link>
-                  )}
-                </Box>
-              </Box>
-            );
+            if (i % 2 == 0) {
+              return <LeftCard item={item} />;
+            }
+            return <RightCard item={item} />;
           })}
         </Container>
-      </Container>
+      </Box>
     </>
   );
 }

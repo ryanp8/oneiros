@@ -23,8 +23,7 @@ export default function Team() {
           margin: 0,
           padding: "5%",
           minHeight: "100vh",
-          // background: "#048fd4",
-          background: `linear-gradient(0deg, rgba(1,39,75,1) 0%, rgba(47,64,80,1) 100%);`,
+          background: "#fdbb2d"
         }}
       >
         <Container sx={{ color: "white" }}>

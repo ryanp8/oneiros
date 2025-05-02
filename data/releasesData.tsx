@@ -2,7 +2,7 @@ import pbeImg from "../public/pbeCover.png";
 import pbeImg2 from "../public/pbe2.jpeg";
 import drSparkyImg from "../public/DrSparkysBlack.jpeg";
 import moonlightDinerImg from "../public/moonlightDiner.jpeg";
-import justiceArchImg from "../public/justicearch.png";
+import justiceArchImg from "../public/justicearch_logo.jpeg";
 import skuyImg from "../public/skuy.png";
 import Image, { StaticImageData } from "next/image";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
