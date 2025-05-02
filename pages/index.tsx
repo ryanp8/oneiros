@@ -44,22 +44,17 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
-          // backgroundImage: `linear-gradient(0deg, #8c6234 0%, #2f4050 100%)`,
-          // backgroundColor: '#2f4050'
           backgroundColor: '#000000'
         }}
       >
         <Container
           sx={{
-            marginTop: 15,
-            // display: "flex",
-            // alignItems: "center",
-            // flexDirection: "column",
+            marginTop: 0,
           }}
         >
           <Typography
             variant={windowWidth > 800 ? "h1" : "h2"}
-            fontFamily="Courier"
+            fontFamily="Cinzel Decorative"
             fontWeight={100}
             textAlign="center"
             color="#ffffff"
@@ -68,14 +63,21 @@ export default function Home() {
           </Typography>
           <Typography
             variant={windowWidth > 800 ? "h3" : "h5"}
-            fontFamily="Merriweather"
+            fontFamily="Cardo"
             textAlign="center"
             fontWeight={100}
-            marginTop={3}
-            color="#aaaaaa"
+            marginY={3}
+            color="#DC6928"
           >
             A student-run multimedia startup based out of Northwestern
             University
+          </Typography>
+
+          <Typography fontFamily="Cardo" color="#ffffff" textAlign="center">
+            Our mission here at Fable Mason Studios is to tell stories. We tell our stories through the audio dramas we bring to life, and we tell your stories through the advertising we do to bring your missions to life. At the root of our work is our enthusiasm to share the products of our imagination with the rest of the world. 
+          </Typography>
+          <Typography fontFamily="Cardo" color="#ffffff" textAlign="center">
+            We started as a passionate group of students looking to channel our creativity in a fun and fulfilling way. Today, our studio consists of 8 creative minds who are always seeking new ways to turn our dreams - and yours - into reality, and we love the community we’ve built over these past few years. Follow along and join us as we continue to showcase even more of the storytelling we have to offer here at Fable Mason Studios!
           </Typography>
         </Container>
         <Container>
@@ -108,7 +110,7 @@ export default function Home() {
           </Container>
         </Container>
       </Box>
-      <Box
+      {/* <Box
         id="featured"
         sx={{
           margin: 0,
@@ -177,7 +179,7 @@ export default function Home() {
             </Grid>
           </Box>
         </Container>
-      </Box>
+      </Box> */}
     </>
   );
 }
