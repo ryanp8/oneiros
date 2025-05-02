@@ -8,7 +8,11 @@ import Modal from "../components/modal";
 
 import { Release, releases } from "@/data/releasesData";
 
-function LeftCard({ item }) {
+
+interface CardProps {
+  item: Release;
+}
+function LeftCard({ item }: CardProps) {
   return (
     <Container
       sx={{ display: "flex", justifyContent: "space-apart", marginY: 1 }}
@@ -30,7 +34,7 @@ function LeftCard({ item }) {
   );
 }
 
-function RightCard({ item }) {
+function RightCard({ item }: CardProps) {
   return (
     <Container
       sx={{
@@ -99,9 +103,9 @@ export default function Releases() {
         >
           {releases.map((item, i) => {
             if (i % 2 == 0) {
-              return <LeftCard item={item} />;
+              return <LeftCard key={i} item={item} />;
             }
-            return <RightCard item={item} />;
+            return <RightCard key={i} item={item} />;
           })}
         </Container>
       </Box>
