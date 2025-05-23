@@ -8,20 +8,43 @@ import Modal from "../components/modal";
 
 import { Release, releases } from "@/data/releasesData";
 
-
 interface CardProps {
   item: Release;
 }
 function LeftCard({ item }: CardProps) {
   return (
     <Container
-      sx={{ display: "flex", justifyContent: "space-apart", marginY: 2 }}
+      sx={{
+        display: "flex",
+        justifyContent: "space-apart",
+        marginY: 2,
+      }}
     >
-      <Box sx={{ width: "100%", marginRight: 2 }}>
+      <Box sx={{ width: "100%", marginLeft: 2 }}>
         <h1 style={{ color: "#ffffff", fontFamily: "Cardo" }}>{item.name}</h1>
         <Typography sx={{ fontFamily: "Cardo", color: "#ffffff" }}>
           {item.description}
         </Typography>
+        {item.url && (
+          <Box sx={{ display: "flex", padding: 0 }}>
+            <Link href={item.url} scroll={false}>
+              <Box
+                sx={{
+                  background: "#ff9a03",
+                  color: "white",
+                  paddingX: 2,
+                  paddingY: 1,
+                  marginY: 2,
+                  borderRadius: 4,
+                }}
+              >
+                <Typography fontSize={18} fontFamily="Cardo">
+                  Listen Here
+                </Typography>
+              </Box>
+            </Link>
+          </Box>
+        )}
       </Box>
       <Image
         src={item.img}
@@ -49,6 +72,26 @@ function RightCard({ item }: CardProps) {
         <Typography sx={{ fontFamily: "Cardo", color: "#ffffff" }}>
           {item.description}
         </Typography>
+        {item.url && (
+          <Box sx={{ display: "flex", padding: 0 }}>
+            <Link href={item.url} scroll={false}>
+              <Box
+                sx={{
+                  background: "#ff9a03",
+                  color: "white",
+                  paddingX: 2,
+                  paddingY: 1,
+                  marginY: 2,
+                  borderRadius: 4,
+                }}
+              >
+                <Typography fontSize={18} fontFamily="Cardo">
+                  Listen Here
+                </Typography>
+              </Box>
+            </Link>
+          </Box>
+        )}
       </Box>
       <Image
         src={item.img}

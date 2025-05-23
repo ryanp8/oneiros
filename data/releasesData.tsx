@@ -33,6 +33,7 @@ export const releases: Release[] = [
     released: false,
     artCredits: ["Gavin Shaub"],
     featured: true,
+    url: 'https://open.spotify.com/show/2q63SdSmpQlns780rSDGLM'
   },
   {
     name: "Pursuit of the Bitter End",
@@ -69,6 +70,7 @@ export const releases: Release[] = [
     ),
     artCredits: ["@NyazureDreams"],
     featured: true,
+    url: 'https://open.spotify.com/show/5TjlX1Yozd2P90dvSBB7g7'
   },
   {
     name: "Justice Arch Advertisement",
@@ -77,13 +79,13 @@ export const releases: Release[] = [
     featured: false,
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7166489053930962944/"
   },
-  {
-    name: "Skuy Advertisement",
-    img: skuyImg,
-    description: "",
-    featured: false,
-    url: "https://www.instagram.com/reel/C4_J0qXu5hi/?igsh=NTc4MTIwNjQ2YQ=="
-  },
+  // {
+  //   name: "Skuy Advertisement",
+  //   img: skuyImg,
+  //   description: "",
+  //   featured: false,
+  //   url: "https://www.instagram.com/reel/C4_J0qXu5hi/?igsh=NTc4MTIwNjQ2YQ=="
+  // },
 ];
 
 export const featured = releases.filter((release) => release.featured);

@@ -67,13 +67,13 @@ export const people: Bio[] = [
     description: "Baz is a fourth-year Linguistics and Theatre student from Milwaukee, Wisconsin. He loves doing weird voices, and is excited to collaborate on all these amazing projects!",
     img: bazImg
   },
-  {
-    name: "Sianna Perez",
-    role: "Finances",
-    img: siannaImg,
-    description:
-      "Sianna is a second-year student studying mathematics who joined Fable Mason Studios to help with project funding and financing. She is working on brainstorming ways to commodify and fund new projects. She is excited to see the growth of upcoming projects and our team!",
-  },
+  // {
+  //   name: "Sianna Perez",
+  //   role: "Finances",
+  //   img: siannaImg,
+  //   description:
+  //     "Sianna is a second-year student studying mathematics who joined Fable Mason Studios to help with project funding and financing. She is working on brainstorming ways to commodify and fund new projects. She is excited to see the growth of upcoming projects and our team!",
+  // },
   {
     name: "Ryan Poon",
     role: "Operations",
@@ -81,13 +81,13 @@ export const people: Bio[] = [
     description:
       "Ryan is a junior studying computer science and math who is excited to see and contribute towards all of the creative projects Fable Mason Studios is working on. He currently maintains the website and helps with funding research.",
   },
-  {
-    name: "Emma Scally",
-    role: "Web Developer",
-    description:
-      "Emma is a third-year student studying computer science and data science. She joined Fable Masons Studios this year and is helping with web development. She has loved the opportunity to combine her interest in technology and story-telling, and is excited to be a part of Fable Mason Studios' journey!",
-    img: emmaImg,
-  },
+  // {
+  //   name: "Emma Scally",
+  //   role: "Web Developer",
+  //   description:
+  //     "Emma is a third-year student studying computer science and data science. She joined Fable Masons Studios this year and is helping with web development. She has loved the opportunity to combine her interest in technology and story-telling, and is excited to be a part of Fable Mason Studios' journey!",
+  //   img: emmaImg,
+  // },
   {
     name: "Devan Chanda",
     role: "Head of Social Marketing & Branding",
