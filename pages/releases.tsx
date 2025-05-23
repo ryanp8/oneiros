@@ -117,7 +117,7 @@ export default function Releases() {
   return (
     <>
       <Head>
-        <title>Team | Fable Mason Studios</title>
+        <title>Releases | Fable Mason Studios</title>
         <link
           rel="shortcut icon"
           type="image/png"
