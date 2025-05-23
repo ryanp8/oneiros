@@ -2,6 +2,7 @@ import { Container, Typography, Box } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import * as React from "react";
+import Head from "next/head";
 
 import Navbar from "../components/navbar";
 import Modal from "../components/modal";
@@ -19,6 +20,10 @@ export default function Releases() {
 
   return (
     <>
+      <Head>
+        <title>Releases | Fable Mason Studios</title>
+        <link rel="shortcut icon" type="image/png" href="Fable Mason Logo Compressed.png"/>
+      </Head>
       <Navbar />
       <Box
         sx={{
