@@ -7,6 +7,7 @@ import {
   Button,
   Grid,
 } from "@mui/material";
+import Head from "next/head";
 
 import Navbar from "../components/navbar";
 import { people } from "@/data/profilesData";
@@ -16,6 +17,10 @@ import AboutCard from "../components/aboutCard";
 export default function Team() {
   return (
     <>
+      <Head>
+        <title>Team | Fable Mason Studios</title>
+        <link rel="shortcut icon" type="image/png" href="Fable Mason Logo Compressed.png"/>
+      </Head>
       <Navbar />
       <Box
         id="about"
