@@ -15,7 +15,7 @@ interface CardProps {
 function LeftCard({ item }: CardProps) {
   return (
     <Container
-      sx={{ display: "flex", justifyContent: "space-apart", marginY: 1 }}
+      sx={{ display: "flex", justifyContent: "space-apart", marginY: 2 }}
     >
       <Box sx={{ width: "100%", marginRight: 2 }}>
         <h1 style={{ color: "#ffffff", fontFamily: "Cardo" }}>{item.name}</h1>
@@ -40,7 +40,7 @@ function RightCard({ item }: CardProps) {
       sx={{
         display: "flex",
         justifyContent: "space-apart",
-        marginY: 1,
+        marginY: 2,
         flexDirection: "row-reverse",
       }}
     >
@@ -73,14 +73,11 @@ export default function Releases() {
   return (
     <>
       <Navbar />
-      <Modal
-        modalOpen={modalOpen}
-        setModalOpen={setModalOpen}
-        modalRelease={modalRelease}
-        windowWidth={windowWidth}
-      />
       <Box
         sx={{
+          margin: 0,
+          padding: "5%",
+          minHeight: "100vh",
           background: `linear-gradient(0deg, rgba(1,39,75,1) 0%, rgba(47,64,80,1) 100%);`,
         }}
       >
@@ -88,7 +85,6 @@ export default function Releases() {
           variant="h2"
           fontFamily="Cinzel Decorative"
           textAlign="center"
-          marginBottom={4}
           color="#ffffff"
         >
           Our Work

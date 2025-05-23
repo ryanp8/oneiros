@@ -82,7 +82,7 @@ export default function Home() {
         </Container>
         <Container>
           <Container sx={{ display: "flex", justifyContent: "center" }}>
-            <Link href="#featured" scroll={false}>
+            <Link href="/releases" scroll={false}>
               <Box
                 sx={{
                   background: "#ff9a03",
@@ -92,7 +92,7 @@ export default function Home() {
                   borderRadius: 4,
                 }}
               >
-                <Typography fontSize={24} fontFamily="Merriweather">
+                <Typography fontSize={24} fontFamily="Cardo">
                   Our Work
                 </Typography>
               </Box>

@@ -27,7 +27,7 @@ export default function Team() {
         }}
       >
         <Container sx={{ color: "white" }}>
-          <Typography variant="h2" fontFamily="Merriweather" textAlign="center">
+          <Typography variant="h2" fontFamily="Cinzel Decorative" textAlign="center">
             Our Team
           </Typography>
           <Box sx={{ flexGrow: 1, marginY: 5 }}>

@@ -20,7 +20,82 @@ export default function Releases() {
   return (
     <>
       <Navbar />
-      <Modal
+      <Box
+        sx={{
+          background: `linear-gradient(0deg, rgba(1,39,75,1) 0%, rgba(47,64,80,1) 100%);`,
+          height: "100vh",
+        }}
+      >
+        <Container sx={{ padding: 10 }}>
+          <Typography
+            variant="h2"
+            color="white"
+            fontFamily="Cardo"
+            textAlign="center"
+            marginBottom={4}
+          >
+            Inquiries
+          </Typography>
+          <Container
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              color="white"
+              fontFamily="Cardo"
+              sx={{ textAlign: "center" }}
+            >
+              For general inquiries, please email us at{" "}
+              <Link
+                style={{ textDecoration: "underline" }}
+                href="mailto:fablemasonstudios@gmail.com"
+              >
+                fablemasonstudios@gmail.com
+              </Link>
+            </Typography>
+          </Container>
+        </Container>
+        <Container sx={{ marginTop: 10 }}>
+          <Typography
+            variant="h2"
+            color="white"
+            fontFamily="Cardo"
+            textAlign="center"
+            marginBottom={4}
+          >
+            Advertising Grant
+          </Typography>
+          <Container
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              color="white"
+              fontFamily="Cardo"
+              sx={{ textAlign: "center" }}
+            >
+              Please fill out{" "}
+              <Link
+                style={{ textDecoration: "underline" }}
+                href="mailto:fablemasonstudios@gmail.com"
+              >
+                this
+              </Link>{" "}
+              form if you&apos;re interested in our advertising grant!
+            </Typography>
+          </Container>
+        </Container>
+      </Box>
+
+      {/* <Modal
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
         modalRelease={modalRelease}
@@ -29,7 +104,7 @@ export default function Releases() {
       <Container sx={{ marginTop: 10 }}>
         <Typography
           variant="h2"
-          fontFamily="Merriweather"
+          fontFamily="Cardo"
           textAlign="center"
           marginBottom={4}
         >
@@ -45,7 +120,7 @@ export default function Releases() {
         >
           <Typography
             color="black"
-            fontFamily="Merriweather"
+            fontFamily="Cardo"
             sx={{ textAlign: "center" }}
           >
             For general inquiries, please email us at{" "}
@@ -61,7 +136,7 @@ export default function Releases() {
       <Container sx={{ marginTop: 10 }}>
         <Typography
           variant="h2"
-          fontFamily="Merriweather"
+          fontFamily="Cardo"
           textAlign="center"
           marginBottom={4}
         >
@@ -77,7 +152,7 @@ export default function Releases() {
         >
           <Typography
             color="black"
-            fontFamily="Merriweather"
+            fontFamily="Cardo"
             sx={{ textAlign: "center" }}
           >
             Please fill out{" "}
@@ -90,7 +165,7 @@ export default function Releases() {
             {" "} form if you&apos;re interested in our advertising grant!
           </Typography>
         </Container>
-      </Container>
+      </Container> */}
     </>
   );
 }
